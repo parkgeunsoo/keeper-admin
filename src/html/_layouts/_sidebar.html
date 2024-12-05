@@ -1,0 +1,93 @@
+<aside id="sidebar">
+  <div class="vstack gap-4 gap-lg-9">
+    <div class="sidebar-logo">
+      <a href="@@webRoot/html/pages/dashboard/dashboard.html" class="img">
+        <img src="@@webRoot/assets/images/logo.svg" alt="">
+      </a>
+    </div>
+    <nav class="sidebar-nav" id="sidevarNav">
+      <ul>
+        <li class="sidebar-item">
+          <a href="#" data-bs-target="#gnb-reservation" data-bs-toggle="collapse" class="sidebar-link @@if (context.dep1 === '광고 관리') {active}" aria-expanded="@@if (context.dep1 === '광고 관리') {true}"> <!-- 펼쳐짐: aria-expanded="true" / 현재메뉴: .active -->
+            <span>광고 관리</span>
+          </a>
+          <div id="gnb-reservation" data-bs-parent="#sidevarNav" class="accordion-collapse collapse @@if (context.dep1 === '광고 관리') {show}"> <!-- 펼쳐짐: .show -->
+            <div class="depth2-heading">광고 관리</div>
+            <ul class="depth2">
+              <li class="sidebar-item">
+                <a href="@@webRoot/html/pages/advertisement/main-banner.html" class="sidebar-link @@if (context.dep2 === '메인 배너 광고') {active}">메인 배너 광고</a> <!-- 현재메뉴: .active -->
+              </li>
+              <li class="sidebar-item">
+                <a href="@@webRoot/html/pages/advertisement/sub-banner.html" class="sidebar-link @@if (context.dep2 === '서브 배너 광고') {active}">서브 배너 광고</a>
+              </li>
+              <li class="sidebar-item">
+                <a href="@@webRoot/html/pages/advertisement/contents.html" class="sidebar-link @@if (context.dep2 === '컨텐츠 광고') {active}">컨텐츠 광고</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="sidebar-item">
+          <a href="@@webRoot/html/pages/contest/contest.html" class="sidebar-link @@if (context.dep1 === '대회 관리') {active}" aria-expanded="@@if (context.dep1 === '대회 관리') {true}">
+            <span>대회 관리</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="@@webRoot/html/pages/certificate/certificate.html" class="sidebar-link @@if (context.dep1 === '상장 관리') {active}" aria-expanded="@@if (context.dep1 === '상장 관리') {true}">
+            <span>상장 관리</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" data-bs-target="#gnb-fee" data-bs-toggle="collapse" class="sidebar-link @@if (context.dep1 === '회원 관리') {active}" aria-expanded="@@if (context.dep1 === '회원 관리') {true}">
+            <span>회원 관리</span>
+          </a>
+          <div id="gnb-fee" data-bs-parent="#sidevarNav" class="accordion-collapse collapse @@if (context.dep1 === '회원 관리') {show}"> <!-- 펼쳐짐: .show -->
+            <div class="depth2-heading">회원 관리</div>
+            <ul class="depth2">
+              <li class="sidebar-item">
+                <a href="@@webRoot/html/pages/member/member-individual.html" class="sidebar-link @@if (context.dep2 === '개인회원') {active}">개인회원</a>
+              </li>
+              <li class="sidebar-item">
+                <a href="@@webRoot/html/pages/member/member-enterprise.html" class="sidebar-link @@if (context.dep2 === '기업회원') {active}">기업회원</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" data-bs-target="#gnb-setting" data-bs-toggle="collapse" class="sidebar-link @@if (context.dep1 === '게시판 관리') {active}" aria-expanded="@@if (context.dep1 === '게시판 관리') {true}">
+            <span>게시판 관리</span>
+          </a>
+          <div id="gnb-setting" data-bs-parent="#sidevarNav" class="accordion-collapse collapse @@if (context.dep1 === '게시판 관리') {show}"> <!-- 펼쳐짐: .show -->
+            <div class="depth2-heading">게시판 관리</div>
+            <ul class="depth2">
+              <li class="sidebar-item">
+                <a href="@@webRoot/html/pages/board/notice-list.html" class="sidebar-link @@if (context.dep2 === '공지사항') {active}">공지사항</a>
+              </li>
+              <li class="sidebar-item">
+                <a href="@@webRoot/html/pages/board/faq-list.html" class="sidebar-link @@if (context.dep2 === '자주묻는 질문') {active}">자주묻는 질문</a>
+              </li>
+              <li class="sidebar-item">
+                <a href="@@webRoot/html/pages/board/qna-contest-list.html" class="sidebar-link @@if (context.dep2 === '대회 문의') {active}">대회 문의</a>
+              </li>
+              <li class="sidebar-item">
+                <a href="@@webRoot/html/pages/board/qna-item-list.html" class="sidebar-link @@if (context.dep2 === '상품 문의') {active}">상품 문의</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" data-bs-target="#gnb-notice" data-bs-toggle="collapse" class="sidebar-link @@if (context.dep1 === '설정') {active}" aria-expanded="@@if (context.dep1 === '설정') {true}">
+            <span>설정</span>
+          </a>
+          <div id="gnb-notice" data-bs-parent="#sidevarNav" class="accordion-collapse collapse @@if (context.dep1 === '설정') {show}"> <!-- 펼쳐짐: .show -->
+            <div class="depth2-heading">설정</div>
+            <ul class="depth2">
+              <li class="sidebar-item">
+                <a href="@@webRoot/html/pages/setting/basic-site.html" class="sidebar-link @@if (context.dep2 === '기본설정') {active}">기본설정</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</aside>
