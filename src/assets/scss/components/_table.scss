@@ -104,15 +104,15 @@
       position: sticky;
       top: 0;
       border-top: 0;
-      &::before {
-        content: "";
-        width: 100%;
-        height: 1px;
-        background: $border-color;
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
+      // &::before {
+      //   content: "";
+      //   width: 100%;
+      //   height: 1px;
+      //   background: $border-color;
+      //   position: absolute;
+      //   left: 0;
+      //   top: 0;
+      // }
     }
   }
 }
@@ -135,4 +135,15 @@
 
 .table-max-line-2 {
   @include ellipsis-multiline(14, 1.6, 2);
+}
+
+.filter-wrap {
+  background-color: #00000005;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid $gray6;
+  margin-bottom: 16px;
+  .table {
+    border-top: $border-color;
+  }
 }

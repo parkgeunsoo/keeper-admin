@@ -135,71 +135,108 @@
     </div>
   </div>
 </div>
-<!-- //modal: 대회목록 불러오기 -->
 
-<!-- modal: 순서 변경하기 -->
-<div class="modal" tabindex="-1" id="modal-contents-order">
-  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+<!-- modal: 관리자 추가​ -->
+<div class="modal" tabindex="-1" id="modal-add-admin">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">순서 변경하기</h5>
+        <h5 class="modal-title">관리자 추가​</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <div class="scroll-layout">
-          <div class="scroll-content">
-            <table class="table table-hover" id="tableContentsOrder">
-              <thead>
-                <th class="text-center"></th>
-                <th class="text-center">분야</th>
-                <th class="text-center">대회/행사명</th>
-                <th class="text-center">공모대상</th>
-                <th class="text-center">접수기간</th>
-              </thead>
-              <tbody>
-                @@for(i=1; i < 11; i++){ <tr>
-                  <td class="text-center">
-                    <input class="form-check-input" type="radio" name="order">
-                  </td>
-                  <td class="text-center">예술</td>
-                  <td class="text-start">[추천공모전] `+i+`</td>
-                  <td class="text-center">고등학생</td>
-                  <td class="text-center">2023.12.40</td>
-                  </tr>
-                  }
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="hstack gap-2 justify-content-end mt-4">
-          <button type="button" class="btn btn-outline-secondary px-2" aria-label="위로" id="btnUp">
-            <i class="icon-up"></i>
-          </button>
-          <button type="button" class="btn btn-outline-secondary px-2" aria-label="아래로" id="btnDown">
-            <i class="icon-down"></i>
-          </button>
-        </div>
+        <table class="table table-hover" id="tableContestList">
+          <thead>
+            <th class="text-center">이름​</th>
+            <th class="text-center">부서</th>
+            <th class="text-center">ID</th>
+            <th class="text-center">패스워드</th>
+            <th class="text-center">이메일</th>
+            <th class="text-center">가입일​</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center">이용섭 </td>
+              <td class="text-center">공공영업팀</td>
+              <td class="text-start">yslee​</td>
+              <td class="text-center">smart9099!​</td>
+              <td class="text-center">yslee@comxi.com</td>
+              <td class="text-center">2023.12.40</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-lg btn-primary">저장</button>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">저장</button>
+        <button type="button" class="btn btn-gray">닫기</button>
       </div>
     </div>
   </div>
 </div>
-<script>
-  var $selectedItem;
-  $("#tableContentsOrder .form-check-input").on("change", function () {
-    $selectedItem = $(this);
-  });
 
-  $("#btnUp").on("click", function () { //위로
-    var $tr = $selectedItem.closest("tr");
-    $tr.prev().before($tr);
-  });
+<!-- modal: 회원정보 관리 - 1 -->
+<div class="modal" tabindex="-1" id="modal-member-1">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">관리자 추가​</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3 class="table-title">Master ID​</h3>
+        <table class="table table-bordered table-sticky" id="tableContestList">
+          <colgroup>
+            <col width="120px">
+            <col width="">
+            <col width="120px">
+            <col width="">
+            <col width="120px">
+            <col width="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center">업체명</th>
+              <td class="text-center">SLS SMART LIGHT SOLUTIONS GMBH </td>
+              <th class="text-center">언어선택</th>
+              <td class="text-center">KOR​ </td>
+              <th class="text-center">신청일</th>
+              <td class="text-center">2024-08-04​ </td>
+            </tr>
+            <tr>
+              <th class="text-center">ID</th>
+              <td class="text-center">s.uhm​ </td>
+              <th class="text-center">ID 구분</th>
+              <td class="text-center">Master ID​ </td>
+              <th class="text-center">승인일​</th>
+              <td class="text-center">승인전​</td>
+            </tr>
+            <tr>
+              <th class="text-center">성명​</th>
+              <td class="text-center">엄완식 </td>
+              <th class="text-center">부서​</th>
+              <td class="text-center">cofounder​ </td>
+              <th class="text-center">직위</th>
+              <td class="text-center">cofounder​ </td>
+            </tr>
+            <tr>
+              <th class="text-center">Tel No.</th>
+              <td class="text-center">49 173 888 7139​</td>
+              <th class="text-center">C.P​</th>
+              <td class="text-center" colspan="3">49 123 456 4868​ </td>
+            </tr>
+            <tr>
+              <th class="text-center">E-Mail</th>
+              <td class="text-start" colspan="5">s.uhm@smartlightsolutions.de </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">수정</button>
+        <button type="button" class="btn btn-gray">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-  $("#btnDown").on("click", function () { //아래로
-    var $tr = $selectedItem.closest("tr");
-    $tr.next().after($tr);
-  });
-</script>
 <!-- //modal: 순서 변경하기 -->
