@@ -42,7 +42,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">비밀번호 변경</h5>
+        <p class="modal-title">비밀번호 변경</p>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -71,7 +71,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">대회목록 불러오기</h5>
+        <p class="modal-title">대회목록 불러오기</p>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -141,7 +141,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">관리자 추가​</h5>
+        <p class="modal-title">관리자 추가​</p>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -179,7 +179,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">관리자 추가​</h5>
+        <p class="modal-title">회원정보 관리</p>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -234,6 +234,443 @@
       <div class="modal-footer gap-2">
         <button type="button" class="btn btn-primary">수정</button>
         <button type="button" class="btn btn-gray">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 회원정보 관리2 subId1 -->
+<div class="modal" tabindex="-1" id="modal-member-2">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">회원정보 관리</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3 class="table-title">Sub ID 1</h3>
+        <table class="table table-bordered table-sticky" id="tableContestList">
+          <colgroup>
+            <col width="120px">
+            <col width="">
+            <col width="120px">
+            <col width="">
+            <col width="120px">
+            <col width="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center">업체명</th>
+              <td class="text-center">SLS SMART LIGHT SOLUTIONS GMBH </td>
+              <th class="text-center">언어선택</th>
+              <td class="text-center">KOR​ </td>
+              <th class="text-center">신청일</th>
+              <td class="text-center">2024-08-04​ </td>
+            </tr>
+            <tr>
+              <th class="text-center">ID</th>
+              <td class="text-center">s.uhm​ </td>
+              <th class="text-center">ID 구분</th>
+              <td class="text-center">Master ID​ </td>
+              <th class="text-center">승인일​</th>
+              <td class="text-center">승인전​</td>
+            </tr>
+            <tr>
+              <th class="text-center">성명​</th>
+              <td class="text-center">엄완식 </td>
+              <th class="text-center">부서​</th>
+              <td class="text-center">cofounder​ </td>
+              <th class="text-center">직위</th>
+              <td class="text-center">cofounder​ </td>
+            </tr>
+            <tr>
+              <th class="text-center">Tel No.</th>
+              <td class="text-center">49 173 888 7139​</td>
+              <th class="text-center">C.P​</th>
+              <td class="text-center" colspan="3">49 123 456 4868​ </td>
+            </tr>
+            <tr>
+              <th class="text-center">E-Mail</th>
+              <td class="text-start" colspan="5">s.uhm@smartlightsolutions.de </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-gray">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- modal: 기업 정보 관리 -->
+<div class="modal" tabindex="-1" id="modal-cp">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">기업 정보 관리</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="tab1" data-bs-toggle="tab" data-bs-target="#panel1" type="button"
+              role="tab" aria-controls="panel1" aria-selected="true">기업정보</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#panel2" type="button" role="tab"
+              aria-controls="panel2" aria-selected="false">관리자 정보</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <!--기업정보--->
+          <div class="tab-pane fade show active" id="panel1" role="tabpanel" aria-labelledby="tab1">
+            <p class="table-title  mt-6">계약정보</p>
+            <table class="table table-bordered table-sticky" id="tableContestList">
+              <colgroup>
+                <col width="120px">
+                <col width="410px">
+                <col width="120px">
+                <col width="190px">
+                <col width="120px">
+                <col width="">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">국가</th>
+                  <td class="text-center">Germany</td>
+                  <th class="text-center">최초 계약일</th>
+                  <td class="text-center"></td>
+                  <th class="text-center">계약 갱신일</th>
+                  <td class="text-center"></td>
+                </tr>
+                <tr>
+                  <th class="text-center">PRO LEVEL</th>
+                  <td class="text-center"></td>
+                  <th class="text-center">ESS LEVEL</th>
+                  <td class="text-center"></td>
+                  <th class="text-center">여신기간</th>
+                  <td class="text-center"></td>
+                </tr>
+                <tr>
+                  <th class="text-center">승인상태</th>
+                  <td class="text-center">승인요청 중</td>
+                  <th class="text-center">영업 지역</th>
+                  <td class="text-center" colspan="3"></td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="table-title mt-6">기업정보</p>
+            <table class="table table-bordered table-sticky" id="tableContestList">
+              <colgroup>
+                <col width="120px">
+                <col width="410px">
+                <col width="120px">
+                <col width="190px">
+                <col width="120px">
+                <col width="">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">업체명</th>
+                  <td class="text-start">SLS SMART LIGHT SOLUTIONS GMBH</td>
+                  <th class="text-center">설립입</th>
+                  <td class="text-center">2018.10.15</td>
+                  <th class="text-center">법인구분</th>
+                  <td class="text-center">법인사업자</td>
+                </tr>
+                <tr>
+                  <th class="text-center">TAX No</th>
+                  <td class="text-start">DE310301069</td>
+                  <th class="text-center">Tel No.</th>
+                  <td class="text-start">0176/63625560</td>
+                  <th class="text-center">FAX N0.</th>
+                  <td class="text-start"></td>
+                </tr>
+                <tr>
+                  <th class="text-center">대표자1</th>
+                  <td class="text-start">FLEISCHHAUER NILS</td>
+                  <th class="text-center">대표자2</th>
+                  <td class="text-start">WAN SIK UHM(엄완식)</td>
+                  <th class="text-center">Zip Code</th>
+                  <td class="text-center">105613</td>
+                </tr>
+                <tr>
+                  <th class="text-center">Home Page</th>
+                  <td class="text-start" colspan="5">http://www.smartkeeper.de</td>
+                </tr>
+                <tr>
+                  <th class="text-center">회사 e-mail</th>
+                  <td class="text-start" colspan="2">smartkeeper@smartlightsolutions.de</td>
+                  <th class="text-center">대표 e-mail</th>
+                  <td class="text-start" colspan="2"></td>
+                </tr>
+                <tr>
+                  <th class="text-center">주소 1</th>
+                  <td class="text-start" colspan="5">LINSENKAMP, 8B, HAMBURG, 22175, GERMANY</td>
+                </tr>
+                <tr>
+                  <th class="text-center">주소 2</th>
+                  <td class="text-start" colspan="5"></td>
+                </tr>
+                <tr>
+                  <th class="text-center">주요판매제품</th>
+                  <td class="text-start" colspan="5">rice cooker & SmartKeeper
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex justify-content-end gap-2 mt-6">
+              <button type="button" class="btn btn-primary">업체승인</button>
+              <button type="button" class="btn btn-gray">닫기</button>
+            </div>
+          </div>
+          <!--관리자정보--->
+          <div class="tab-pane fade" id="panel2" role="tabpanel" aria-labelledby="tab2">
+            <div class="d-flex justify-content-between align-items-center mt-6 mb-3">
+              <p class="table-title p-0">Master ID</p>
+              <button type="button" class="btn btn-primary">사용정지</button>
+            </div>
+            <table class="table table-bordered table-sticky" id="tableContestList">
+              <colgroup>
+                <col width="120px">
+                <col width="410px">
+                <col width="120px">
+                <col width="175px">
+                <col width="120px">
+                <col width="">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">업체명</th>
+                  <td class="text-center">SLS SMART LIGHT SOLUTIONS GMBH</td>
+                  <th class="text-center">언어선택</th>
+                  <td class="text-center">KOR</td>
+                  <th class="text-center">신청일</th>
+                  <td class="text-center">2024-08-04</td>
+                </tr>
+                <tr>
+                  <th class="text-center">ID</th>
+                  <td class="text-center">s.uhm</td>
+                  <th class="text-center">ID 구분</th>
+                  <td class="text-center">Master ID</td>
+                  <th class="text-center">승인일</th>
+                  <td class="text-center">승인전</td>
+                </tr>
+                <tr>
+                  <th class="text-center">성명</th>
+                  <td class="text-center">엄완식</td>
+                  <th class="text-center">부서</th>
+                  <td class="text-center">cofounder</td>
+                  <th class="text-center">직위</th>
+                  <td class="text-center">cofounder</td>
+                </tr>
+                <tr>
+                  <th class="text-center">Tel No.</th>
+                  <td class="text-center">49 173 888 7139</td>
+                  <th class="text-center">C.P</th>
+                  <td class="text-center" colspan="3">49 123 456 4868</td>
+                </tr>
+                <tr>
+                  <th class="text-center">E-Mail</th>
+                  <td class="text-start" colspan="5">N.Fleischhauer@smartlightsolutions.de</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex justify-content-between align-items-center mt-6 mb-3">
+              <p class="table-title p-0">Sub ID 1</p>
+              <button type="button" class="btn btn-primary">사용정지</button>
+            </div>
+            <table class="table table-bordered table-sticky" id="tableContestList">
+              <colgroup>
+                <col width="120px">
+                <col width="410px">
+                <col width="120px">
+                <col width="175px">
+                <col width="120px">
+                <col width="">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">업체명</th>
+                  <td class="text-center">SLS SMART LIGHT SOLUTIONS GMBH</td>
+                  <th class="text-center">언어선택</th>
+                  <td class="text-center">KOR</td>
+                  <th class="text-center">신청일</th>
+                  <td class="text-center">2024-08-04</td>
+                </tr>
+                <tr>
+                  <th class="text-center">ID</th>
+                  <td class="text-center">s.uhm</td>
+                  <th class="text-center">ID 구분</th>
+                  <td class="text-center">Master ID</td>
+                  <th class="text-center">승인일</th>
+                  <td class="text-center">승인전</td>
+                </tr>
+                <tr>
+                  <th class="text-center">성명</th>
+                  <td class="text-center">엄완식</td>
+                  <th class="text-center">부서</th>
+                  <td class="text-center">cofounder</td>
+                  <th class="text-center">직위</th>
+                  <td class="text-center">cofounder</td>
+                </tr>
+                <tr>
+                  <th class="text-center">Tel No.</th>
+                  <td class="text-center">49 173 888 7139</td>
+                  <th class="text-center">C.P</th>
+                  <td class="text-center" colspan="3">49 123 456 4868</td>
+                </tr>
+                <tr>
+                  <th class="text-center">E-Mail</th>
+                  <td class="text-start" colspan="5">N.Fleischhauer@smartlightsolutions.de</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex justify-content-between align-items-center mt-6 mb-3">
+              <p class="table-title p-0">Sub ID 2</p>
+              <button type="button" class="btn btn-primary">사용정지</button>
+            </div>
+            <table class="table table-bordered table-sticky" id="tableContestList">
+              <colgroup>
+                <col width="120px">
+                <col width="410px">
+                <col width="120px">
+                <col width="175px">
+                <col width="120px">
+                <col width="">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">업체명</th>
+                  <td class="text-center">SLS SMART LIGHT SOLUTIONS GMBH</td>
+                  <th class="text-center">언어선택</th>
+                  <td class="text-center">KOR</td>
+                  <th class="text-center">신청일</th>
+                  <td class="text-center">2024-08-04</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex justify-content-end mt-6">
+              <button type="button" class="btn btn-gray">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- modal: 회원관리-Master ID 관리 -->
+<div class="modal" tabindex="-1" id="modal-master-modify">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">Master ID 정보 수정</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-sticky" id="tableContestList">
+          <colgroup>
+            <col style="width: 120px">
+            <col>
+            <col style="width: 120px">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <th><span class="text-danger">*</span>Master ID</th>
+              <td>
+                <div class="row">
+                  <div class="col-auto">
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="col-auto">
+                    <button type="button" class="btn btn-primary px-3">중복확인</button>
+                  </div>
+                </div>
+
+              </td>
+              <th><span class="text-danger">*</span>언어선택</th>
+              <td>
+                <div class="py-2">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="langType" id="lang1">
+                    <label class="form-check-label" for="lang1">ENG</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="langType" id="lang2">
+                    <label class="form-check-label" for="lang2">KOR</label>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="text-danger">*</span>PASSWORD</th>
+              <td colspan="3">
+                <input type="password" class="form-control">
+              </td>
+            </tr>
+            <tr>
+              <th><span class="text-danger">*</span>PASSWORD Confirm</th>
+              <td colspan="3">
+                <input type="password" class="form-control">
+              </td>
+            </tr>
+            <tr>
+              <th><span class="text-danger">*</span>Full Name</th>
+              <td colspan="3">
+                <input type="text" class="form-control">
+              </td>
+            </tr>
+            <tr>
+              <th><span class="text-danger">*</span>직위</th>
+              <td colspan="3">
+                <input type="text" class="form-control">
+              </td>
+            </tr>
+            <tr>
+              <th><span class="text-danger">*</span>부서</th>
+              <td colspan="3">
+                <input type="text" class="form-control">
+              </td>
+            </tr>
+            <tr>
+              <th><span class="text-danger">*</span>전화번호</th>
+              <td colspan="3">
+                <input type="tel" class="form-control">
+              </td>
+            </tr>
+            <tr>
+              <th><span class="text-danger">*</span>핸드폰</th>
+              <td colspan="3">
+                <input type="tel" class="form-control">
+              </td>
+            </tr>
+            <tr>
+              <th><span class="text-danger">*</span>E-mail</th>
+              <td colspan="3">
+                <div class="row align-items-center">
+                  <div class="col-auto">
+                    <input type="tel" class="form-control">
+                  </div>
+                  @
+                  <div class="col-auto">
+                    <input type="tel" class="form-control">
+                  </div>
+                </div>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">저장</button>
+        <button type="button" class="btn btn-gray">취소</button>
       </div>
     </div>
   </div>

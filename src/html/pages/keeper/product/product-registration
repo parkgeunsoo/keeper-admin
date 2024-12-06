@@ -7,12 +7,12 @@
 
 <body>
   <div id="wrap">
-    @@include('@@webRoot/html/_layouts/_navbar.html', {"dep1": "회원관리​"})
+    @@include('@@webRoot/html/_layouts/_navbar.html', {"dep1": "상품관리"})
     <main id="main">
-      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "회원관리"})
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "상품관리", "dep2" : "상품 등록 및 수정" })
       <div id="container">
         <div class="page-top">
-          <h1 class="page-title d-none d-lg-block">회원관리​</h1>
+          <h1 class="page-title d-none d-lg-block">상품 등록 및 수정</h1>
         </div>
         <div class="contents">
           <div class="filter-wrap">
@@ -23,7 +23,7 @@
               </colgroup>
               <tbody>
                 <tr>
-                  <th class="text-center">검색분류</th>
+                  <th class="text-center">상품분류 등록</th>
                   <td>
                     <div class="hstack gap-2">
                       <select class="form-select" aria-label="Default select example">
@@ -32,34 +32,25 @@
                         <option value="2">전체</option>
                         <option value="3">전체</option>
                       </select>
-                      <input type="text" class="form-control" value="">
+                      <button type="button" class="btn btn-outline-gray px-3" aria-label="추가">
+                        <i class="icon-plus"></i>
+                      </button>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <th class="text-center">ID 상태​</th>
+                  <th class="text-center">상품그룹 등록</th>
                   <td>
-                    <div class="py-2">
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="idStateType" id="idState1">
-                        <label class="form-check-label" for="idState1">전체</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="idStateType" id="idState2">
-                        <label class="form-check-label" for="idState2">사용 중</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="idStateType" id="idState3">
-                        <label class="form-check-label" for="idState3">승인 전</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="idStateType" id="idState4">
-                        <label class="form-check-label" for="idState4">사용정지</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="idStateType" id="idState5">
-                        <label class="form-check-label" for="idState5">ID 삭제</label>
-                      </div>
+                    <div class="hstack gap-2">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected="">전체</option>
+                        <option value="1">전체</option>
+                        <option value="2">전체</option>
+                        <option value="3">전체</option>
+                      </select>
+                      <button type="button" class="btn btn-outline-gray px-3" aria-label="추가">
+                        <i class="icon-plus"></i>
+                      </button>
                     </div>
                   </td>
                 </tr>

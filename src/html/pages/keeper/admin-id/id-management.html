@@ -7,19 +7,19 @@
 
 <body>
   <div id="wrap">
-    @@include('@@webRoot/html/_layouts/_navbar.html', {"dep1": "회원관리​"})
+    @@include('@@webRoot/html/_layouts/_navbar.html', {"dep1": "관리자 ID 관리​"})
     <main id="main">
-      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "회원관리"})
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "관리자 ID 관리"})
       <div id="container">
         <div class="page-top">
-          <h1 class="page-title d-none d-lg-block">회원관리​</h1>
+          <h1 class="page-title d-none d-lg-block">관리자 ID 관리</h1>
         </div>
         <div class="contents">
           <div class="scroll-layout">
             <div class="scroll-content">
               <table class="table table-hover">
                 <thead>
-                  <th class="text-center">번호</th>
+                  <th class="text-center">No</th>
                   <th class="text-center">이름</th>
                   <th class="text-center">부서​</th>
                   <th class="text-center">ID</th>
@@ -50,7 +50,8 @@
           </div>
           <div class="d-flex pt-6 align-items-center justify-content-end">
             <div class="hstack gap-2">
-              <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modal-add-admin">관리자 추가</button>
+              <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+                data-bs-target="#modal-add-admin">관리자 추가</button>
               <button type="button" class="btn btn-primary">선택 삭제​</button>
             </div>
           </div>
