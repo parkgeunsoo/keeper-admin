@@ -63,6 +63,13 @@
     }
   }
 }
+.table-bordered2 {
+  thead {
+    th {
+      background: var(--gray7);
+    }
+  }
+}
 
 .table-details {
   border: 0;
