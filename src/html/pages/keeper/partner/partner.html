@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_navbar.html', {"dep1": "파트너사 설정 관리"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "파트너사 설정 관리"})
+      <div id="container">
+        <div class="page-top">
+          <h1 class="page-title d-none d-lg-block">파트너사 설정 관리</h1>
+        </div>
+        <div class="contents">
+          <div class="filter-wrap">
+            <table class="table table-bordered table-sticky">
+              <colgroup>
+                <col style="width: 216px">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">업체검색</th>
+                  <td>
+                    <input type="text" class="form-control">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex mt-2 align-items-center justify-content-end">
+              <div class="hstack gap-2">
+                <button type="button" class="btn btn-gray">검색</button>
+                <button type="button" class="btn btn-outline-gray px-2" aria-label="초기화">
+                  <i class="icon-reset"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="scroll-layout">
+            <div class="scroll-content">
+              <table class="table table-hover table-sticky">
+                <colgroup>
+                  <col style="width: 300px">
+                </colgroup>
+                <thead>
+                  <th class="text-center">업체명</th>
+                  <th class="text-center">업체약어</th>
+                  <th class="text-center">국가</th>
+                  <th class="text-center">사용화폐</th>
+                  <th class="text-center">발주가능</th>
+                  <th class="text-center">제품구분​</th>
+                  <th class="text-center">위탁여부​</th>
+                  <th class="text-center">패턴입력</th>
+                  <th class="text-center">PRO Level</th>
+                  <th class="text-center">ESS Level</th>
+                  <th class="text-center">업체상태</th>
+                </thead>
+                <tbody>
+                  @@for( i=1; i < 4; i++){ <tr>
+                    <td class="text-start">
+                      <a href="javascript:void(0)">Smart Light Solution Smart Light Solution</a>
+                    </td>
+                    <td class="text-center">SLS</td>
+                    <td class="text-center">DE</td>
+                    <td class="text-center">￦</td>
+                    <td class="text-center">YES</td>
+                    <td class="text-center">PRO + ESS</td>
+                    <td class="text-center">
+                      <a href="javascript:void(0)">YES</a>
+                    </td>
+                    <td class="text-center">YES</td>
+                    <td class="text-center">L2</td>
+                    <td class="text-center">V2</td>
+                    <td class="text-center">정상사용</td>
+                    </tr>
+                    }
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="hstack gap-2 justify-content-end mt-4">
+            <button type="button" class="btn btn-green">Excel</button>
+          </div>
+          @@include('@@webRoot/html/_components/_pagination.html')
+          <!-- //container -->
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

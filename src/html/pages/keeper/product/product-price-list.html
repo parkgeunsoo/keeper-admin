@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_navbar.html', {"dep1": "상품관리", "dep2" : "상품 가격표 생성 입력"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "상품관리", "dep2" : "상품 가격표 생성 입력"})
+      <div id="container">
+        <div class="page-top">
+          <h1 class="page-title d-none d-lg-block">상품 가격표 생성 입력</h1>
+        </div>
+        <div class="contents">
+          <div class="filter-wrap">
+            <table class="table table-bordered table-sticky">
+              <colgroup>
+                <col style="width: 216px">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">상품분류 선택</th>
+                  <td>
+                    <select class="form-select" aria-label="Default select example" style="width: 200px;">
+                      <option selected="">PRO</option>
+                      <option value="1">PRO</option>
+                      <option value="2">PRO</option>
+                      <option value="3">PRO</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">상품그룹 선택</th>
+                  <td>
+                    <select class="form-select" aria-label="Default select example" style="width: 200px;">
+                      <option selected="">USB Security</option>
+                      <option value=" 1">USB Security</option>
+                      <option value="2">USB Security</option>
+                      <option value="3">USB Security</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex mt-2 align-items-center justify-content-end">
+              <div class="hstack gap-2">
+                <button type="button" class="btn btn-gray">상품 분류 검색</button>
+              </div>
+            </div>
+          </div>
+          <div class="scroll-layout">
+            <div class="scroll-content">
+              <table class="table table-hover table-sticky table-bordered table-bordered2">
+                <thead>
+                  <tr>
+                    <th class="text-center" rowspan="2">번호</th>
+                    <th class="text-center" rowspan="2">분류</th>
+                    <th class="text-center" rowspan="2">상품그룹</th>
+                    <th class="text-center" rowspan="2">모델명</th>
+                    <th class="text-center" rowspan="2">제품명(한글)</th>
+                    <th class="text-center" colspan="2">L4</th>
+                    <th class="text-center" colspan="2">L5</th>
+                    <th class="text-center" colspan="2">L6</th>
+                    <th class="text-center" colspan="2">L7</th>
+                    <th class="text-center" colspan="2">HZ</th>
+                  </tr>
+                  <tr>
+                    <th class="text-center">달러</th>
+                    <th class="text-center">원화</th>
+                    <th class="text-center">달러</th>
+                    <th class="text-center">원화</th>
+                    <th class="text-center">달러</th>
+                    <th class="text-center">원화</th>
+                    <th class="text-center">달러</th>
+                    <th class="text-center">원화</th>
+                    <th class="text-center">달러</th>
+                    <th class="text-center">원화</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @@for( i=1; i < 18; i++){ <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center">PRO</td>
+                    <td class="text-center">USB Security</td>
+                    <td class="text-center">CSK-UL10</td>
+                    <td class="text-center">USB포트락</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    </tr>
+                    }
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="hstack gap-2 justify-content-end mt-4">
+            <button type="button" class="btn btn-primary">저장</button>
+            <button type="button" class="btn btn-gray">가격표 다운로드</button>
+          </div>
+          @@include('@@webRoot/html/_components/_pagination.html')
+          <!-- //container -->
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

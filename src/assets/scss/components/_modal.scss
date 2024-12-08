@@ -15,6 +15,7 @@
 }
 .modal-header {
   border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .modal-body {
@@ -58,4 +59,35 @@
       flex: 1;
     }
   }
+}
+
+.modal-img-wrap{
+  display: flex;
+  .img{
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #333;
+    border-left: 1px solid #dfe3e8;
+    border-bottom: 1px solid #dfe3e8;
+    padding: 10px;
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.delivery-fee{
+  display: none;
+}
+.modal-backdrop ~ .modal-backdrop {
+  z-index: 1061;
+  ~ .modal-backdrop {
+    z-index: 1063;
+  }
+}
+.modal[data-overlap="true"] {
+  z-index: 1062;
 }

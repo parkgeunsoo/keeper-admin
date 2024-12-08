@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_navbar.html', {"dep1": "상품관리", "dep2" : "상품 패턴 등록"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "상품관리", "dep2" : "상품 패턴 등록"})
+      <div id="container">
+        <div class="page-top">
+          <h1 class="page-title d-none d-lg-block">상품 패턴 등록</h1>
+        </div>
+        <div class="contents">
+          <div class="filter-wrap">
+            <table class="table table-bordered table-sticky">
+              <colgroup>
+                <col style="width: 216px">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">상품분류 선택</th>
+                  <td>
+                    <select class="form-select" aria-label="Default select example" style="width: 200px;">
+                      <option selected="">PRO</option>
+                      <option value="1">PRO</option>
+                      <option value="2">PRO</option>
+                      <option value="3">PRO</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">상품그룹 선택</th>
+                  <td>
+                    <select class="form-select" aria-label="Default select example" style="width: 200px;">
+                      <option selected="">USB Security</option>
+                      <option value=" 1">USB Security</option>
+                      <option value="2">USB Security</option>
+                      <option value="3">USB Security</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="scroll-layout">
+            <div class="scroll-content">
+              <table class="table table-hover table-sticky">
+                <thead>
+                  <th class="text-center">번호</th>
+                  <th class="text-center">분류</th>
+                  <th class="text-center">상품그룹</th>
+                  <th class="text-center">모델명</th>
+                  <th class="text-center">제품명(한글)</th>
+                  <th class="text-center">제품명(영문)</th>
+                  <th class="text-center">추가 구성품명​</th>
+                  <th class="text-center">추가 구성품 수</th>
+                  <th class="text-center">패턴 정보</th>
+                  <th class="text-center">총 패턴 수량</th>
+                  <th class="text-center">ERP Code 수량</th>
+                  <th class="text-center">사용중지 여부</th>
+                </thead>
+                <tbody>
+                  @@for( i=1; i < 11; i++){ <tr>
+                    <td class="text-center">`+ i +`</td>
+                    <td class="text-center">PRO</td>
+                    <td class="text-center">USB Security</td>
+                    <td class="text-center">
+                      <a href="#">CSK-UL10</a>
+                    </td>
+                    <td class="text-center">USB포트락</td>
+                    <td class="text-center">USB Port Lock</td>
+                    <td class="text-center">N/A​</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">
+                      <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modal-pattern">추가</a>
+                    </td>
+                    <td class="text-center">31</td>
+                    <td class="text-center">27( <span>4</span> )</td>
+                    <td class="text-center">N/A</td>
+                    </tr>
+                    }
+                </tbody>
+              </table>
+            </div>
+          </div>
+          @@include('@@webRoot/html/_components/_pagination.html')
+          <!-- //container -->
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

@@ -1,3 +1,6 @@
+<!-- data-overlap="true"  << 모달 최상위에 입력하면 2중으로 최상단에 배치 -->
+<!-- data-bs-backdrop="static"  << 여백 클릭시 안사라지는 팝업 처리 -->
+
 <!-- Alert: sample -->
 <div class="modal alert" tabindex="-1" id="alert-sample1">
   <div class="modal-dialog modal-dialog-centered">
@@ -7,7 +10,7 @@
           Text body Text body Text body Text body Text body Text body Text body Text body Text body
         </p>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer gap-2">
         <div class="d-flex">
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
         </div>
@@ -16,6 +19,7 @@
   </div>
 </div>
 <!-- //Alert: sample -->
+
 <!-- Alert: sample -->
 <div class="modal alert" tabindex="-1" id="alert-sample2">
   <div class="modal-dialog modal-dialog-centered">
@@ -26,7 +30,7 @@
           Text body Text body Text body Text body Text body Text body Text body Text body Text body
         </p>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer gap-2">
         <div class="d-flex">
           <button type="button" class="btn btn-gray" data-bs-dismiss="mo dal">취소</button>
           <button type="button" class="btn btn-primary">확인</button>
@@ -56,85 +60,15 @@
           <input type="password" class="form-control" placeholder="새 비밀번호를 디시 입력해주세요.">
         </div>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer gap-2">
         <div class="d-flex">
-          <button type="button" class="btn btn-lg btn-primary" data-bs-dismiss="modal">비밀번호 변경</button>
+          <button type="button" class="btn  btn-primary" data-bs-dismiss="modal">비밀번호 변경</button>
         </div>
       </div>
     </div>
   </div>
 </div>
 <!-- //modal: 비밀번호 찾기 -->
-
-<!-- modal: 대회목록 불러오기 -->
-<div class="modal" tabindex="-1" id="modal-contest-list">
-  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <p class="modal-title">대회목록 불러오기</p>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="table-top">
-          <div class="form-field search d-flex gap-2 w-100">
-            <div class="input-form flex-grow-1">
-              <i class="icon-search"></i>
-              <input type="text" class="form-control search-form" placeholder="분야, 대회/행사명" />
-              <button type="button" class="clear-button"> <i class="icon-input-close"></i> </button>
-            </div>
-            <button type="button" class="btn btn-dark">검색</button>
-          </div>
-        </div>
-        <div class="scroll-layout">
-          <div class="scroll-content">
-            <table class="table table-hover" id="tableContestList">
-              <thead>
-                <th class="text-center">
-                  <input class="form-check-input check-all" type="checkbox">
-                </th>
-                <th class="text-center">분야</th>
-                <th class="text-center">대회/행사명</th>
-                <th class="text-center">공모대상</th>
-                <th class="text-center">접수기간</th>
-              </thead>
-              <tbody>
-                @@for(i=1; i < 11; i++){ <tr>
-                  <td class="text-center">
-                    <input class="form-check-input" type="checkbox">
-                  </td>
-                  <td class="text-center">예술</td>
-                  <td class="text-start">[추천공모전] 2024년 인권문화 참여·확산을 위한 인권공모전</td>
-                  <td class="text-center">고등학생</td>
-                  <td class="text-center">2023.12.40</td>
-                  </tr>
-                  }
-              </tbody>
-            </table>
-            <script>
-              var $listCheckAll = $("#tableContestList .check-all");
-              var $listCheckItems = $("#tableContestList tbody .form-check-input");
-              $listCheckAll.on("change", function () {
-                var isChecked = $(this).is(':checked');
-                $listCheckItems.prop("checked", isChecked);
-              });
-              $listCheckItems.on("change", function () {
-                if ($listCheckItems.filter(":checked").length == $listCheckItems.length) {
-                  $listCheckAll.prop('checked', true);
-                } else {
-                  $listCheckAll.prop('checked', false);
-                }
-              });
-            </script>
-          </div>
-        </div>
-        @@include('../_components/_pagination.html')
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-lg btn-primary">저장</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- modal: 관리자 추가​ -->
 <div class="modal" tabindex="-1" id="modal-add-admin">
@@ -168,7 +102,7 @@
       </div>
       <div class="modal-footer gap-2">
         <button type="button" class="btn btn-primary">저장</button>
-        <button type="button" class="btn btn-gray">닫기</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
       </div>
     </div>
   </div>
@@ -233,7 +167,7 @@
       </div>
       <div class="modal-footer gap-2">
         <button type="button" class="btn btn-primary">수정</button>
-        <button type="button" class="btn btn-gray">닫기</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
       </div>
     </div>
   </div>
@@ -296,8 +230,8 @@
           </tbody>
         </table>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-gray">닫기</button>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
       </div>
     </div>
   </div>
@@ -423,7 +357,7 @@
             </table>
             <div class="d-flex justify-content-end gap-2 mt-6">
               <button type="button" class="btn btn-primary">업체승인</button>
-              <button type="button" class="btn btn-gray">닫기</button>
+              <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
             </div>
           </div>
           <!--관리자정보--->
@@ -580,7 +514,7 @@
               </tbody>
             </table>
             <div class="d-flex justify-content-end mt-6">
-              <button type="button" class="btn btn-gray">닫기</button>
+              <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
             </div>
           </div>
         </div>
@@ -719,7 +653,7 @@
           </colgroup>
           <thead>
             <tr>
-              <th class="text-center">No</th>
+              <th class="text-center">번호</th>
               <th class="text-center">등록된 상품분류</th>
             </tr>
           </thead>
@@ -742,7 +676,7 @@
       </div>
       <div class="modal-footer gap-2">
         <button type="button" class="btn btn-primary">저장</button>
-        <button type="button" class="btn btn-gray">닫기</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
       </div>
     </div>
   </div>
@@ -784,7 +718,7 @@
             </colgroup>
             <thead>
               <tr>
-                <th class="text-center">No</th>
+                <th class="text-center">번호</th>
                 <th class="text-center">등록된 상품분류</th>
               </tr>
             </thead>
@@ -805,7 +739,7 @@
       </div>
       <div class="modal-footer gap-2">
         <button type="button" class="btn btn-primary">저장</button>
-        <button type="button" class="btn btn-gray">닫기</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
       </div>
     </div>
   </div>
@@ -820,9 +754,10 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <h3 class="table-title">Sub ID 1</h3>
         <table class="table table-bordered table-sticky" id="tableContestList">
           <colgroup>
+            <col width="120px">
+            <col width="">
             <col width="120px">
             <col width="">
             <col width="120px">
@@ -833,24 +768,24 @@
           <tbody>
             <tr>
               <th class="text-center">상품 분류</th>
-              <td class="text-center" colspan="2"><input type="text" class="form-control"></td>
+              <td class="text-center" colspan="3"><input type="text" class="form-control"></td>
               <th class="text-center">상품그룹</th>
-              <td class="text-center" colspan="2"><input type="text" class="form-control"> </td>
+              <td class="text-center" colspan="3"><input type="text" class="form-control"> </td>
             </tr>
             <tr>
               <th class="text-center">한글 제품명</th>
-              <td class="text-center" colspan="2"><input type="text" class="form-control" placeholder="한글로 제품명을 입력하세요.">
+              <td class="text-center" colspan="3"><input type="text" class="form-control" placeholder="한글로 제품명을 입력하세요.">
               </td>
               <th class="text-center">영문 제품명</th>
-              <td class="text-center" colspan="2"><input type="text" class="form-control" placeholder="영문 제품명을 입력하세요.">
+              <td class="text-center" colspan="3"><input type="text" class="form-control" placeholder="영문 제품명을 입력하세요.">
               </td>
             </tr>
             <tr>
               <th class="text-center">모델명</th>
-              <td class="text-center" colspan="2"><input type="text" class="form-control" placeholder="모델명을 입력하세요.">
+              <td class="text-center" colspan="3"><input type="text" class="form-control" placeholder="모델명을 입력하세요.">
               </td>
               <th class="text-center">제품 이미지</th>
-              <td class="text-center" colspan="2">
+              <td class="text-center" colspan="3">
                 <div class="row">
                   <div class="col-auto">
                     <input type="text" class="form-control" value="이미지를 업로드하세요." disabled="">
@@ -866,7 +801,7 @@
             </tr>
             <tr>
               <th class="text-center">패턴옵션</th>
-              <td class="text-center">
+              <td class="text-center" colspan="2">
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="patternType" id="pattern1">
                   <label class="form-check-label" for="pattern2">없음</label>
@@ -877,7 +812,7 @@
                 </div>
               </td>
               <th class="text-center">1차 패턴</th>
-              <td class="text-center">
+              <td class="text-center" colspan="2">
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="patternType1" id="pattern1-1">
                   <label class="form-check-label" for="pattern1-1">없음</label>
@@ -888,7 +823,7 @@
                 </div>
               </td>
               <th class="text-center">2차 패턴 유무</th>
-              <td class="text-center">
+              <td class="text-center" colspan="2">
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="patternType2" id="pattern2-1">
                   <label class="form-check-label" for="pattern2-1">없음</label>
@@ -901,7 +836,7 @@
             </tr>
             <tr>
               <th class="text-center">추가상품</th>
-              <td class="text-center">
+              <td class="text-center" colspan="2">
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="addProduct" id="addProduct1">
                   <label class="form-check-label" for="addProduct2">없음</label>
@@ -912,7 +847,7 @@
                 </div>
               </td>
               <th class="text-center">추가구성품 선택</th>
-              <td class="text-center">
+              <td class="text-center" colspan="2">
                 <div class="row">
                   <div class="col-auto">
                     <input type="text" class="form-control" placeholder="모델명을 입력하세요.">
@@ -925,7 +860,7 @@
                 </div>
               </td>
               <th class="text-center">추가구성품 수량</th>
-              <td class="text-center">
+              <td class="text-center" colspan="2">
                 <div class="row align-items-center">
                   <div class="col-auto">
                     <input type="text" class="form-control" placeholder="모델명을 입력하세요.">
@@ -939,10 +874,1865 @@
           </tbody>
         </table>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-gray">닫기</button>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">저장</button>
+        <button type="button" class="btn btn-gray" data-bs-toggle="modal"
+          data-bs-target="#modal-product-preview">미리보기</button>
       </div>
     </div>
   </div>
 </div>
-<!-- //modal: 순서 변경하기 -->
+
+
+<!-- modal: 개별 상품 정보 보기 (미리보기) -->
+<div class="modal" tabindex="-1" id="modal-product-preview" data-overlap="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">개별 상품 정보 보기</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img-wrap">
+          <div class="img">
+            <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+          </div>
+          <table class="table table-bordered table-sticky" id="tableContestList">
+            <colgroup>
+              <col width="120px">
+              <col width="40%">
+              <col width="120px">
+              <col width="40%">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="text-center">분류</th>
+                <td class="text-center">PRO</td>
+                <th class="text-center">패턴옵션</th>
+                <td class="text-center">N/A</td>
+              </tr>
+              <tr>
+                <th class="text-center">상품그룹</th>
+                <td class="text-center">USB Security</td>
+                <th class="text-center">추가구성품</th>
+                <td class="text-center">N/A</td>
+              </tr>
+              <tr>
+                <th class="text-center">제품명(영문)</th>
+                <td class="text-center">USB PROT LOCK</td>
+                <th class="text-center">추가구성품 수량</th>
+                <td class="text-center">N/A</td>
+              </tr>
+              <tr>
+                <th class="text-center">제품명(한글)</th>
+                <td class="text-center">USB포트락</td>
+                <th class="text-center">1차 패턴</th>
+                <td class="text-center">Multi</td>
+              </tr>
+              <tr>
+                <th class="text-center">모델명</th>
+                <td class="text-center">CSK-UL10</td>
+                <th class="text-center">2차 패턴유무</th>
+                <td class="text-center">N/A</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 등록 상품 리스트 -->
+<div class="modal" tabindex="-1" id="modal-contest-list">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">등록 상품 리스트</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-hover" id="tableContestList">
+          <thead>
+            <th class="text-center">번호</th>
+            <th class="text-center">분류</th>
+            <th class="text-center">상품그룹</th>
+            <th class="text-center">모델명</th>
+            <th class="text-center">제품명(한글)</th>
+            <th class="text-center">제품명(영문)</th>
+            <th class="text-center">패턴 옵션</th>
+            <th class="text-center">1차 패턴</th>
+            <th class="text-center">2차 패턴</th>
+            <th class="text-center">추가 구성품</th>
+            <th class="text-center">추가 구성품 수</th>
+            <th class="text-center">사용 중지</th>
+
+          </thead>
+          <tbody>
+            @@for(i=1; i < 11; i++){ <tr>
+              <td class="text-center">`+ i +`</td>
+              <td class="text-center">PRO</td>
+              <td class="text-center">USB Security</td>
+              <td class="text-center">
+                <a href="javascript:void(0)">CSK-UL10</a>
+              </td>
+              <td class="text-center">
+                USB포트락
+              </td>
+              <td class="text-center">USB Port Lock</td>
+              <td class="text-center">N/A</td>
+              <td class="text-center">M</td>
+              <td class="text-center">N/A</td>
+              <td class="text-center">N/A</td>
+              <td class="text-center">N/A</td>
+              <td class="text-center">N/A</td>
+              </tr>
+              }
+          </tbody>
+        </table>
+        @@include('../_components/_pagination.html')
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-green">Excel</button>
+        <button type="button" class="btn  btn-primary">저장</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 패턴 정보 등록 / 수정 -->
+<div class="modal" tabindex="-1" id="modal-pattern" data-overlap="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">패턴 정보 등록 / 수정</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img-wrap">
+          <div class="img">
+            <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+          </div>
+          <table class="table table-bordered table-sticky" id="tableContestList">
+            <colgroup>
+              <col width="120px">
+              <col width="25%">
+              <col width="120px">
+              <col width="25%">
+              <col width="120px">
+              <col width="25%">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="text-center">분류</th>
+                <td class="text-center">PRO</td>
+                <th class="text-center">패턴옵션</th>
+                <td class="text-center">N/A</td>
+                <th class="text-center">1차 패턴</th>
+                <td class="text-center">-</td>
+              </tr>
+              <tr>
+                <th class="text-center">상품그룹</th>
+                <td class="text-center">USB Security</td>
+                <th class="text-center">추가구성품</th>
+                <td class="text-center">N/A</td>
+                <th class="text-center">2차 패턴</th>
+                <td class="text-center">-</td>
+              </tr>
+              <tr>
+                <th class="text-center">모델명</th>
+                <td class="text-center">CSK-UL10</td>
+                <th class="text-center">추가구성품 수량</th>
+                <td class="text-center">N/A</td>
+                <th class="text-center">총 패턴 수</th>
+                <td class="text-center">-</td>
+              </tr>
+              <tr>
+                <th class="text-center">제품명(한글)</th>
+                <td class="text-center">USB포트락</td>
+                <th class="text-center">사용중지 여부</th>
+                <td class="text-center">N/A</td>
+                <th class="text-center">ERP Code 수</th>
+                <td class="text-center">-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="filter-wrap mt-4">
+          <table class="table table-bordered table-sticky">
+            <colgroup>
+              <col style="width: 120px">
+              <col>
+              <col style="width: 120px">
+              <col>
+              <col style="width: 120px">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="text-center">1차 패턴</th>
+                <td>
+                </td>
+                <th class="text-center">2치 패턴</th>
+                <td>
+                </td>
+                <th class="text-center">EEP Code</th>
+                <td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex mt-2 align-items-center justify-content-end">
+            <div class="hstack gap-2">
+              <button type="button" class="btn btn-gray">검색</button>
+            </div>
+          </div>
+        </div>
+        <div class="hstack gap-2 justify-content-end">
+          <button type="button" class="btn btn-primary">패턴 정보 일괄 업로드</button>
+          <button type="button" class="btn btn-orange">개별 패턴 추가</button>
+        </div>
+        <table class="table table-hover mt-6">
+          <thead>
+            <th class="text-center">번호</th>
+            <th class="text-center"></th>
+            <th class="text-center">생성(추가)일</th>
+            <th class="text-center">모델명</th>
+            <th class="text-center">1차 패턴</th>
+            <th class="text-center">2차 패턴</th>
+            <th class="text-center">ERP코드</th>
+            <th class="text-center">수정일</th>
+            <th class="text-center">수정내용</th>
+
+          </thead>
+          <tbody>
+            @@for(i=1; i < 11; i++){ <tr>
+              <td class="text-center">`+ i +`</td>
+              <td class="text-center"></td>
+              <td class="text-center">2024-05-10</td>
+              <td class="text-center">CSK-UL10</td>
+              <td class="text-center">AB</td>
+              <td class="text-center">없음</td>
+              <td class="text-center">1S0201AB0270</td>
+              <td class="text-center"></td>
+              <td class="text-center"></td>
+              </tr>
+              }
+          </tbody>
+        </table>
+        @@include('../_components/_pagination.html')
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">저장</button>
+        <button type="button" class="btn btn-green" data-bs-dismiss="modal">Excel</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 패턴 정보 일괄 업로드 -->
+<div class="modal" tabindex="-1" id="modal-pattern-upload">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">패턴 정보 일괄 업로드​</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="hstack gap-2 justify-content-end">
+          <button type="button" class="btn btn-sm btn-gray">파일찾기</button>
+          <button type="button" class="btn btn-sm btn-primary">업로드</button>
+          <button type="button" class="btn btn-sm btn-outline-danger">선택삭제</button>
+        </div>
+        <table class="table table-hover mt-2" id="pattern-table">
+          <colgroup>
+            <col width="10%">
+            <col width="50%">
+            <col width="20%">
+          </colgroup>
+          <thead>
+            <th class="text-center">
+              <input class="form-check-input check-all" type="checkbox">
+            </th>
+            <th class="text-center">파일명</th>
+            <th class="text-center">크기</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center">
+                <input class="form-check-input" type="checkbox">
+              </td>
+              <td class="text-start">
+                USB 포트락 패턴표.xls
+              </td>
+              <td class="text-center">10kb</td>
+            </tr>
+          </tbody>
+        </table>
+        <script>
+          var $listCheckAll = $("#pattern-table .check-all");
+          var $listCheckItems = $("#pattern-table tbody .form-check-input");
+          $listCheckAll.on("change", function () {
+            var isChecked = $(this).is(':checked');
+            $listCheckItems.prop("checked", isChecked);
+          });
+          $listCheckItems.on("change", function () {
+            if ($listCheckItems.filter(":checked").length == $listCheckItems.length) {
+              $listCheckAll.prop('checked', true);
+            } else {
+              $listCheckAll.prop('checked', false);
+            }
+          });
+        </script>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">적용</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 임시저장 -->
+<div class="modal" tabindex="-1" id="modal-temporary-save" data-overlap="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">임시저장</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="alert-message text-start">
+          입력된 패턴 정보가 추가됩니다.<br>
+          저장 시 오류가 나면 입력된 패턴 정보의 오타 등을 검토해서 다시 입력해 주세요
+        </p>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">저장</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 상품관리- 상품가격 그룹 등록 -->
+<div class="modal" tabindex="-1" id="modal-product-priceRegistration">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">상품가격 그룹 등록</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-sticky mb-6">
+          <colgroup>
+            <col style="width: 150px">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center">상품분류 선택</th>
+              <td>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected="">전체</option>
+                  <option value="1">전체</option>
+                  <option value="2">전체</option>
+                  <option value="3">전체</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="max-height:400px;" class="overflow-y-auto">
+          <table class="table table-hover" id="tableContestList">
+            <colgroup>
+              <col style="width: 120px">
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="text-center">번호</th>
+                <th class="text-center">등록된 가격 그룹</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center">1</td>
+                <td class="text-center"><a href="#">L1</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="d-flex justify-content-end mt-5">
+          <button type="button" class="btn btn-outline-gray px-3" aria-label="추가">
+            <i class="icon-plus"></i>추가
+          </button>
+        </div>
+
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">저장</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 업체설정 -->
+<div class="modal" tabindex="-1" id="modal-product-registration3">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">상품등록</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-6" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button"
+              role="tab" aria-controls="panel4" aria-selected="true">업체 일반설정</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab5" data-bs-toggle="tab" data-bs-target="#panel5" type="button" role="tab"
+              aria-controls="panel5" aria-selected="false">제품 설정</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab6" data-bs-toggle="tab" data-bs-target="#panel6" type="button" role="tab"
+              aria-controls="panel6" aria-selected="false">위탁 설정</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <!-- 업체 일반설정 --->
+          <div class="tab-pane fade show active" id="panel4" role="tabpanel" aria-labelledby="tab4">
+            <table class="table table-bordered table-sticky mt-6" id="tableContestList">
+              <colgroup>
+                <col width="120px">
+                <col width="130px">
+                <col width="130px">
+                <col width="120px">
+                <col width="130px">
+                <col width="130px">
+                <col width="120px">
+                <col width="130px">
+                <col width="130px">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">업체명</th>
+                  <td class="text-start" colspan="2">Smart Light Solution GMBH</td>
+                  <th class="text-center">업체상태</th>
+                  <td class="text-start" colspan="2">업체승인</td>
+                  <th class="text-center">업체 약어</th>
+                  <td class="text-start" colspan="2">
+                    <div class="d-flex gap-2">
+                      <input type="text" class="form-control" value="SLS">
+                      <button type="button" class="btn  btn-outline-gray">중복검사</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">최초 계약일</th>
+                  <td class="text-start" colspan="2">
+                    <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                  </td>
+                  <th class="text-center">계약일</th>
+                  <td class="text-start" colspan="2">
+                    <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                  </td>
+                  <th class="text-center">계약기간(년)</th>
+                  <td class="text-start" colspan="2">
+                    <div class="d-flex align-items-center gap-2">
+                      <input type="text" class="form-control" placeholder="2">
+                      <p>Year</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">계약 기간</th>
+                  <td class="text-start" colspan="2">
+                    2023.05.07 ~ 2025.05.06
+                  </td>
+                  <th class="text-center">다음 계약 갱신일</th>
+                  <td class="text-start" colspan="2">
+                    D-452
+                  </td>
+                  <th class="text-center">국가</th>
+                  <td class="text-start" colspan="2">
+                    <div class="d-flex align-items-center gap-2">
+                      <input type="text" class="form-control" placeholder="DE">
+                      <button type="button" class="btn btn-dark px-3">
+                        검색
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">영업지역</th>
+                  <td class="text-start" colspan="5">
+                    <input type="text" class="form-control" placeholder="독일, 프랑스, 영국, 이탈리아, 스위스, 스페인, 네덜란드">
+                  </td>
+                  <th class="text-center">사용화폐</th>
+                  <td class="text-start" colspan="2">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="patternType" id="money1">
+                      <label class="form-check-label" for="money1">$</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="patternType" id="money2">
+                      <label class="form-check-label" for="money2">￦</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">발주가능여부</th>
+                  <td class="text-start" colspan="2">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="use1" id="use1">
+                      <label class="form-check-label" for="use1">가능</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="use1" id="use2">
+                      <label class="form-check-label" for="use2">불가능</label>
+                    </div>
+                  </td>
+                  <th class="text-center">패턴 입력 여부</th>
+                  <td class="text-start" colspan="2">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="use2" id="use3">
+                      <label class="form-check-label" for="use3">가능</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="use2" id="use4">
+                      <label class="form-check-label" for="use4">불가능</label>
+                    </div>
+                  </td>
+                  <th class="text-center">시리얼 자체 발행</th>
+                  <td class="text-start" colspan="2">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="use3" id="use5">
+                      <label class="form-check-label" for="use5">가능</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="use3" id="use6">
+                      <label class="form-check-label" for="use6">불가능</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">입고 설정</th>
+                  <td class="text-start" colspan="2">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="store" id="store1">
+                      <label class="form-check-label" for="store1">자동 입고</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="store" id="store2">
+                      <label class="form-check-label" for="store2">수동 입고</label>
+                    </div>
+                  </td>
+                  <th class="text-center">자동 입고 기간(일)</th>
+                  <td class="text-start" colspan="2">
+                    <div class="d-flex align-items-center gap-2">
+                      <input type="text" class="form-control" placeholder="15">
+                      <p>Day</p>
+                    </div>
+                  </td>
+                  <th class="text-center">위탁 발주 여부</th>
+                  <td class="text-start" colspan="2">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="use4" id="use7">
+                      <label class="form-check-label" for="use7">가능</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="use4" id="use8">
+                      <label class="form-check-label" for="use8">불가능</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">일반 발주 여신기준</th>
+                  <td class="text-start" colspan="2">
+                    <input type="text" class="form-control" value="" placeholder="발송일">
+                  </td>
+                  <th class="text-center">일반 발주 여신일</th>
+                  <td class="text-start" colspan="2">
+                    <div class="d-flex align-items-center gap-2">
+                      <input type="text" class="form-control" placeholder="15">
+                      <p>Day</p>
+                    </div>
+                  </td>
+                  <th class="text-center">위탁 발주 여신일</th>
+                  <td class="text-start" colspan="2">
+                    <div class="d-flex align-items-center gap-2">
+                      <input type="text" class="form-control" placeholder="15">
+                      <p>Day</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">기본 할인 사용</th>
+                  <td class="text-start" colspan="2">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="use5" id="use9">
+                      <label class="form-check-label" for="use9">사용</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="use5" id="use10">
+                      <label class="form-check-label" for="use10">미사용</label>
+                    </div>
+                  </td>
+                  <th class="text-center">할인율 설정</th>
+                  <td class="text-start" colspan="2">
+                    <div class="d-flex align-items-center gap-2">
+                      <input type="number" class="form-control" placeholder="15">
+                      <p>%</p>
+                    </div>
+                  </td>
+                  <th class="text-center">담당자 (정)</th>
+                  <td class="text-start" colspan="2">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected="">오동근</option>
+                      <option value="1">오동근</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">할인 소수점 기준</th>
+                  <td class="text-start" colspan="2">
+                    <div class="d-flex align-items-center gap-2">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected="">0</option>
+                        <option value="1">1</option>
+                      </select>
+                      <p>Day</p>
+                    </div>
+                  </td>
+                  <th class="text-center">소수점 처리 기준</th>
+                  <td class="text-start" colspan="2">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected="">반올림</option>
+                      <option value="1">올림</option>
+                    </select>
+                  </td>
+                  <th class="text-center">담당자 (부)</th>
+                  <td class="text-start" colspan="2">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected="">장승근</option>
+                      <option value="1">홍길동</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">할인 소수점 기준</th>
+                  <td class="text-start" colspan="8">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          </div>
+                          <p>SLS_계약서_202240301</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          </div>
+                          <p>SLS_계약서_202240301</p>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <button type="button" class="btn btn-sm btn-gray">파일찾기</button>
+                        <button type="button" class="btn btn-sm btn-outline-danger">선택삭제</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex align-items-center justify-content-end gap-2 mt-4">
+              <button type="button" class="btn btn-primary">저장</button>
+              <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+          <!-- 제품 설정 --->
+          <div class="tab-pane fade" id="panel5" role="tabpanel" aria-labelledby="tab5">
+            <ul class="nav nav-pills mb-6" id="detailmyTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="product-tab" data-bs-toggle="tab" data-bs-target="#tab-product"
+                  type="button" role="tab" aria-controls="tab-product" aria-selected="true">제품일반설정</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pro-tab" data-bs-toggle="tab" data-bs-target="#pro" type="button"
+                  role="tab" aria-controls="pro" aria-selected="false">PRO</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="ess-tab" data-bs-toggle="tab" data-bs-target="#ESS" type="button"
+                  role="tab" aria-controls="ESS" aria-selected="false">ESS</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="sample-tab" data-bs-toggle="tab" data-bs-target="#Sample" type="button"
+                  role="tab" aria-controls="Sample" aria-selected="false">Sample</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="etc-tab" data-bs-toggle="tab" data-bs-target="#ETC" type="button"
+                  role="tab" aria-controls="ETC" aria-selected="false">ETC</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="detailTabContent">
+              <div class="tab-pane fade show active" id="tab-product" role="tabpanel" aria-labelledby="product-tab">
+                <div class="filter-wrap">
+                  <table class="table table-bordered table-sticky">
+                    <colgroup>
+                      <col style="width: 216px">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th class="text-center">업체명</th>
+                        <td>
+                          Smart Light Solution GMBH
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="text-center">판매상품</th>
+                        <td>
+                          <div class="py-2">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                              <label class="form-check-label" for="flexCheckDefault">PRO</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                              <label class="form-check-label" for="flexCheckDefault">ESS</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                              <label class="form-check-label" for="flexCheckDefault">Sample</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                              <label class="form-check-label" for="flexCheckDefault">ETC</label>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <table class="table table-hover table-sticky">
+                  <colgroup>
+                    <col width="120px">
+                  </colgroup>
+                  <thead>
+                    <th class="text-center">번호</th>
+                    <th class="text-center">판매상품</th>
+                    <th class="text-center">가격 레벨선택</th>
+                  </thead>
+                  <tbody>
+                    @@for( i=1; i < 11; i++){ <tr>
+                      <td class="text-center">`+ i +`</td>
+                      <td class="text-center">PRO</td>
+                      <td class="text-center">
+                        <select class="form-select" aria-label="Default select example">
+                          <option selected="">L2</option>
+                          <option value="1">L2</option>
+                        </select>
+                      </td>
+                      </tr>
+                      }
+                  </tbody>
+                </table>
+                <div class="d-flex align-items-center justify-content-end gap-2 mt-4">
+                  <button type="button" class="btn btn-primary">저장</button>
+                  <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="pro" role="tabpanel" aria-labelledby="pro-tab">
+                <div style="max-height: 383px;overflow-y: auto;">
+                  <table class="table table-hover table-sticky table-bordered table-bordered2">
+                    <thead>
+                      <tr>
+                        <th class="text-center" colspan="2">PRO</th>
+                        <th class="text-center" rowspan="2">상품등록</th>
+                        <th class="text-center" rowspan="2">등록 상품 수</th>
+                      </tr>
+                      <tr>
+                        <th class="text-center">번호</th>
+                        <th class="text-center">상품그룹명</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @@for( i=1; i < 18; i++){ <tr>
+                        <td class="text-center">1</td>
+                        <td class="text-center">
+                          <a href="javascript:void(0)">USB Securitu</a>
+                        </td>
+                        <td class="text-center"><a href="#">상품 추가 삭제</a></td>
+                        <td class="text-center">13</td>
+                        </tr>
+                        }
+                    </tbody>
+                  </table>
+                </div>
+                <div style="max-height: 383px;overflow-y: auto;">
+                  <table class="table table-hover mt-6" id="product-table">
+                    <thead>
+                      <th class="text-center">
+                        <input class="form-check-input check-all" type="checkbox">
+                      </th>
+                      <th class="text-center">분류</th>
+                      <th class="text-center">상품그룹</th>
+                      <th class="text-center">모델명</th>
+                      <th class="text-center">제품명(한글)</th>
+                      <th class="text-center">패턴옵션</th>
+                      <th class="text-center">추가 구성품명</th>
+                      <th class="text-center">추가 구성품 수</th>
+                      <th class="text-center">패턴 추가 (수정)</th>
+                      <th class="text-center">업체사용 패턴수량</th>
+                      <th class="text-center">사용가능 총 패턴 수</th>
+
+                    </thead>
+                    <tbody>
+                      @@for(i=1; i < 11; i++){ <tr>
+                        <td class="text-center">
+                          <input class="form-check-input" type="checkbox">
+                        </td>
+                        <td class="text-center">PRO</td>
+                        <td class="text-center">USB Security</td>
+                        <td class="text-center">CSK-UL10</td>
+                        <td class="text-center">USB포트락</td>
+                        <td class="text-center">N/A</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center"></td>
+                        <td class="text-center">
+                          <a href="javascript:void(0)">추가</a>
+                        </td>
+                        <td class="text-center">26</td>
+                        <td class="text-center">27</td>
+                        </tr>
+                        }
+                    </tbody>
+                  </table>
+                  @@include('../_components/_pagination.html')
+                  <script>
+                    var $listCheckAll = $("#product-table .check-all");
+                    var $listCheckItems = $("#product-table tbody .form-check-input");
+                    $listCheckAll.on("change", function () {
+                      var isChecked = $(this).is(':checked');
+                      $listCheckItems.prop("checked", isChecked);
+                    });
+                    $listCheckItems.on("change", function () {
+                      if ($listCheckItems.filter(":checked").length == $listCheckItems.length) {
+                        $listCheckAll.prop('checked', true);
+                      } else {
+                        $listCheckAll.prop('checked', false);
+                      }
+                    });
+                  </script>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="ESS" role="tabpanel" aria-labelledby="ess-tab">
+                3
+              </div>
+              <div class="tab-pane fade" id="Sample" role="tabpanel" aria-labelledby="sample-tab">
+                4
+              </div>
+              <div class="tab-pane fade" id="ETC" role="tabpanel" aria-labelledby="etc-tab">
+                5
+              </div>
+            </div>
+          </div>
+          <!-- 위탁 설정 --->
+          <div class="tab-pane fade" id="panel6" role="tabpanel" aria-labelledby="tab6">
+            <div class="filter-wrap">
+              <table class="table table-bordered table-sticky">
+                <colgroup>
+                  <col style="width: 216px">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th class="text-center">업체명</th>
+                    <td>
+                      Smart Light Solution GMBH
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-center">판매상품</th>
+                    <td>
+                      <div class="py-2">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                          <label class="form-check-label" for="flexCheckDefault">PRO</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                          <label class="form-check-label" for="flexCheckDefault">ESS</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                          <label class="form-check-label" for="flexCheckDefault">Sample</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                          <label class="form-check-label" for="flexCheckDefault">ETC</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <table class="table table-hover table-sticky">
+              <colgroup>
+                <col width="120px">
+              </colgroup>
+              <thead>
+                <th class="text-center">번호</th>
+                <th class="text-center">선택</th>
+                <th class="text-center">위탁 판매상품</th>
+                <th class="text-center">위탁상태설정</th>
+                <th class="text-center">위탁기간설정</th>
+                <th class="text-center">위탁 시작일</th>
+                <th class="text-center">위탁 종료일</th>
+                <th class="text-center">위탁 자동 정산일</th>
+              </thead>
+              <tbody>
+                @@for( i=1; i < 11; i++){ <tr>
+                  <td class="text-center">`+ i +`</td>
+                  <td class="text-center">PRO</td>
+                  <td class="text-center">
+                    <div class="form-check d-flex justify-content-center">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected="">위탁 사용</option>
+                      <option value="1">위탁 중지</option>
+                    </select>
+                  </td>
+                  <td class="text-center">
+                    <div class="d-flex align-items-center gap-2">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected="">1</option>
+                        <option value="1">2</option>
+                      </select>
+                      <p>Year</p>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                  </td>
+                  <td class="text-center">
+                    2024-05-06
+                  </td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <p>매월</p>
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected="">10일</option>
+                        <option value="1">20일</option>
+                      </select>
+                    </div>
+                  </td>
+                  </tr>
+                  }
+              </tbody>
+            </table>
+            <div class="d-flex align-items-center justify-content-end gap-2 mt-4">
+              <button type="button" class="btn btn-primary">저장</button>
+              <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">저장</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+
+<!-- modal: 배송 정보 -->
+<div class="modal" tabindex="-1" id="modal-delivery-info">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">배송 정보</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-sticky" id="tableContestList">
+          <colgroup>
+            <col width="120px">
+            <col width="">
+            <col width="120px">
+            <col width="">
+            <col width="120px">
+            <col width="">
+            <col width="120px">
+            <col width="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center"><span class="text-danger">*</span>일자</th>
+              <td class="text-center" colspan="3"> <input type="text" class="form-control w-100"
+                  placeholder="YYYY.MM.DD" data-picker="date" /></td>
+              <th class="text-center"><span class="text-danger">*</span>발주자</th>
+              <td class="text-center" colspan="3"><input type="text" class="form-control" value="엄완식" readonly> </td>
+            </tr>
+            <tr>
+              <th class="text-center"><span class="text-danger">*</span>배송방법 요청</th>
+              <td class="text-center" colspan="3">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>특송(DHL, UPS등)</option>
+                  <option value="1">특송(DHL, UPS등)</option>
+                  <option value="2">특송(DHL, UPS등)</option>
+                  <option value="3">특송(DHL, UPS등)</option>
+                </select>
+              </td>
+              <th class="text-center"><span class="text-danger">*</span>운송정보/어카운트 No.</th>
+              <td class="text-center" colspan="3"><input type="text" class="form-control" placeholder="EX)DHL/1234567">
+              </td>
+            </tr>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>배송지 주소
+              </th>
+              <td class="text-center" colspan="7"><input type="text" class="form-control"
+                  placeholder="Marschall str 42, 40477, Dusseldorf Germany">
+              </td>
+            </tr>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>인수인
+              </th>
+              <td class="text-center" colspan="2">
+                <input type="email" class="form-control" placeholder="Nils Fleischhauer">
+              </td>
+              <th class="text-center">
+                <span class="text-danger">*</span>연락처
+              </th>
+              <td class="text-center" colspan="2">
+                <input type="email" class="form-control" placeholder="+49(0)173/8887139">
+              </td>
+              <th class="text-center">
+                <span class="text-danger">*</span>담당자 E-mail
+              </th>
+              <td class="text-center" colspan="2">
+                <input type="email" class="form-control" placeholder="">
+              </td>
+            </tr>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>요청사항
+              </th>
+              <td class="text-center" colspan="7">
+                <textarea name="" id="" class="form-control" placeholder="고객사로 직접 배송을 위해서 배송정보를 수정하겠습니다."></textarea>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">수정 승인</button>
+        <button type="button" class="btn btn-outline-danger">수정 거절</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 배송 정보 수정 승인 -->
+<div class="modal" tabindex="-1" id="modal-delivery-success" data-overlap="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">배송 정보 수정 승인</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="alert-message text-start">
+          발주자가 배송 정보를 수정하였습니다.<br>
+          배송정보 수정을 승인하겠습니까?
+        </p>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">수정 승인</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 배송 정보 수정 거절 -->
+<div class="modal" tabindex="-1" id="modal-delivery-refusal" data-overlap="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">배송 정보 수정 거절</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="alert-message text-start">
+          발주자가 배송정보를 수정을 요청하였습니다. 수정 요청을 거절하고자 하면 거절 사유를 입력하고 거절 버튼을 클릭하세요
+        </p>
+        <textarea name="" id="" class="form-control">제품이 이미 발송되었습니다.</textarea>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">수정 거절</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 등록 상품 리스트 -->
+<div class="modal" tabindex="-1" id="modal-contest-list">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">등록 상품 리스트</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="ordering" data-bs-toggle="tab" data-bs-target="#ordering-tab"
+              type="button" role="tab" aria-controls="ordering-tab" aria-selected="true">발주 내역</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="modify" data-bs-toggle="tab" data-bs-target="#modify-tab" type="button"
+              role="tab" aria-controls="modify-tab" aria-selected="false">수정 내역</button>
+          </li>
+        </ul>
+
+        <div class="tab-content mt-6" id="myTabContent">
+          <div class="tab-pane fade show active" id="ordering-tab" role="tabpanel" aria-labelledby="ordering">
+            <table class="table table-hover table-sticky table-bordered table-bordered2">
+              <thead>
+                <tr>
+                  <th class="text-center" colspan="2">발주업체</th>
+                  <th class="text-center">발주구분</th>
+                  <th class="text-center" colspan="2">발주일(수정일)</th>
+                  <th class="text-center" colspan="2">발주번호</th>
+                  <th class="text-center">처리단계</th>
+                  <th class="text-center">수정요청</th>
+                  <th class="text-center">수정승인</th>
+                </tr>
+                <tr>
+                  <th class="text-center" colspan="2">Smart Light Solution</th>
+                  <th class="text-center">일반</th>
+                  <th class="text-center" colspan="2">2023-11-03 / 15:57:18</th>
+                  <th class="text-center" colspan="2">SK2023110501</th>
+                  <th class="text-center">발주완료</th>
+                  <th class="text-center">N/A</th>
+                  <th class="text-center">N/A</th>
+                </tr>
+                <tr>
+                  <th class="text-center">단계</th>
+                  <th class="text-center">발주 완료</th>
+                  <th class="text-center">발주 접수</th>
+                  <th class="text-center">상품 준비 중</th>
+                  <th class="text-center">상품 준비 완료</th>
+                  <th class="text-center">할인 적용</th>
+                  <th class="text-center">배송비 추가</th>
+                  <th class="text-center">서류 첨부</th>
+                  <th class="text-center">제품 발송</th>
+                  <th class="text-center">배송 완료</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">Action</td>
+                  <td class="text-center">발주 완료</td>
+                  <td class="text-center">
+                    <a href="javascipt:void(0)" data-bs-toggle="modal" data-bs-target="#modal-ordering-receipt">접수
+                      처리</a>
+                  </td>
+                  <td class="text-center">
+                    <a href="javascipt:void(0)" data-bs-toggle="modal" data-bs-target="#modal-erp-input">ERP 입력</a>
+                  </td>
+                  <td class="text-center">
+                    <a href="javascipt:void(0)" data-bs-toggle="modal" data-bs-target="#modal-product-success">준비 완료
+                      처리</a>
+                  </td>
+                  <td class="text-center">
+                    <a href="javascipt:void(0)" data-bs-toggle="modal" data-bs-target="#modal-discount">할인 적용</a>
+                  </td>
+                  <td class="text-center">
+                    <a href="javascipt:void(0)" data-bs-toggle="modal" data-bs-target="#modal-erp-input">배송비 입력</a>
+                  </td>
+                  <td class="text-center">
+                    <a href="javascipt:void(0)" data-bs-toggle="modal" data-bs-target="#modal-attach-documents">서류
+                      첨부</a>
+                  </td>
+                  <td class="text-center">
+                    <a href="javascipt:void(0)" data-bs-toggle="modal" data-bs-target="#modal-delivery-process">발송
+                      처리</a>
+                  </td>
+                  <td class="text-center">
+                    <a href="javascipt:void(0)" data-bs-toggle="modal" data-bs-target="#modal-product-success">완료 처리</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">수정 Action</td>
+                  <td class="text-center" colspan="2"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="scroll-layout">
+              <div class="scroll-content">
+                <table class="table table-hover mt-6">
+                  <thead>
+                    <th class="text-center">번호</th>
+                    <th class="text-center"></th>
+                    <th class="text-center">발주구분</th>
+                    <th class="text-center">수정사유</th>
+                    <th class="text-center">구분</th>
+                    <th class="text-center">모델명</th>
+                    <th class="text-center">제품명</th>
+                    <th class="text-center">패턴 (컬러)</th>
+                    <th class="text-center">2차 패턴</th>
+                    <th class="text-center">수량</th>
+                    <th class="text-center">단가</th>
+                    <th class="text-center">공급가</th>
+                    <th class="text-center">국가</th>
+                    <th class="text-center">신규여부</th>
+                    <th class="text-center">유통사</th>
+                    <th class="text-center">최종고객사</th>
+                    <th class="text-center">지사/부서</th>
+                    <th class="text-center">시리얼</th>
+                    <th class="text-center">비고</th>
+                  </thead>
+                  <tbody>
+                    @@for(i=1; i < 11; i++){ <tr>
+                      <td class="text-center">`+ i +`</td>
+                      <td class="text-center"></td>
+                      <td class="text-center">일반</td>
+                      <td class="text-center"></td>
+                      <td class="text-center">PRO</td>
+                      <td class="text-center">CSK-UL10</td>
+                      <td class="text-center">USB Port Lock</td>
+                      <td class="text-center">AB</td>
+                      <td class="text-center"></td>
+                      <td class="text-center">100</td>
+                      <td class="text-center">1,327</td>
+                      <td class="text-center">132,700</td>
+                      <td class="text-center">NL</td>
+                      <td class="text-center">NEW</td>
+                      <td class="text-center">HART4TECH</td>
+                      <td class="text-center">NN Group</td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      </tr>
+                      }
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="modal-footer gap-2">
+              <button type="button" class="btn btn-green">Excel</button>
+              <button type="button" class="btn  btn-primary">저장</button>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="modify-tab" role="tabpanel" aria-labelledby="modify">
+            <p>수정 내역 기획서 없음</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 발주 접수 -->
+<div class="modal" tabindex="-1" id="modal-ordering-receipt" data-overlap="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">발주 접수</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="alert-message text-start">
+          발주를 접수하시겠습니까?<br>
+          발주를 거절하는 경우 발주 거절 버튼 클릭
+        </p>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">발주 접수</button>
+        <button type="button" class="btn btn-orange">발주 거절</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 발주 거절 -->
+<div class="modal" tabindex="-1" id="modal-ordering-refusal" data-overlap="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">발주 거절</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="alert-message text-start">
+          요청한 발주 사유로 인해 거절 되었습니다.
+        </p>
+        <textarea name="" id="" class="form-control mt-4">미수금 발생으로 발주가 거절 되었습니다.</textarea>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">발주 접수</button>
+        <button type="button" class="btn btn-orange">발주 거절</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 발주 접수 취소 -->
+<div class="modal" tabindex="-1" id="modal-ordering-cancel" data-overlap="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">발주 접수 취소</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="alert-message text-start">
+          발주 접수를 취소 하시겠습니까?<br>
+          취소를 하면 해당 발주는 전단계인 임시 저장 상태로 변경됩니다.
+        </p>
+        <textarea name="" id="" class="form-control mt-4">미수금 발생으로 발주가 거절 되었습니다.</textarea>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">발주 취소</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: ERP 입력 -->
+<div class="modal" tabindex="-1" id="modal-erp-input" data-overlap="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">ERP 입력</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="alert-message text-start">
+          발주데이터를 ERP에 입력 하시겠습니까?<br>
+          ERP 입력전에 배송비를 추가하려면 배송비 추가를 클릭 해주세요
+        </p>
+        <div class="delivery-fee mt-4">
+          <div class="d-flex align-items-center gap-2">
+            <p class="flex-shrink-0">배송비 입력</p>
+            <input type="text" class="form-control" value="250,000">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">ERP 입력</button>
+        <button type="button" class="btn btn-orange" id="delivery-add-btn">배송비 추가</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $('#delivery-add-btn').click(function () {
+          $('.delivery-fee').toggle(); // 요소 보이기/숨기기 전환
+        });
+      });
+    </script>
+  </div>
+</div>
+
+<!-- modal: 상품 준비 완료 -->
+<div class="modal" tabindex="-1" id="modal-product-success" data-overlap="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">상품 준비 완료</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="alert-message text-start">
+          발주 상품의 준비 완료 처리를 하겠습니까?
+        </p>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">준비완료</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 할인 적용 -->
+<div class="modal" tabindex="-1" id="modal-discount" data-overlap="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">할인 적용</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="filter-wrap mt-4">
+          <table class="table table-bordered table-sticky">
+            <colgroup>
+              <col style="width: 150px">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="text-center">
+                  <div class="d-flex align-items-center gap-1">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    </div>
+                    <p>기준 단가 조정</p>
+                  </div>
+                </th>
+                <td>
+                  <div class="d-flex align-items-center gap-2">
+                    <input type="number" class="form-control" style="width: 150px;" value="10">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>%</option>
+                      <option value="1">%</option>
+                    </select>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>소수 0자리 미만</option>
+                      <option value="1">소수 1자리 미만</option>
+                    </select>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>반올림</option>
+                      <option value="1">올림</option>
+                    </select>
+                    <button type="button" class="btn btn-gray">적용</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="text-center">
+                  <div class="d-flex align-items-center gap-1">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    </div>
+                    <p>할인조정</p>
+                  </div>
+                </th>
+                <td>
+                  <div class="d-flex align-items-center gap-2">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>품목별 할인단가</option>
+                      <option value="1"></option>
+                    </select>
+                    <input type="number" class="form-control" style="width: 150px;" value="10">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>%</option>
+                      <option value="1">%</option>
+                    </select>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>소수 0자리 미만</option>
+                      <option value="1">소수 1자리 미만</option>
+                    </select>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>반올림</option>
+                      <option value="1">올림</option>
+                    </select>
+                    <button type="button" class="btn btn-gray">적용</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="hstack gap-2 justify-content-end mt-6">
+          <p>통화 : ￦</p>
+        </div>
+        <div style="max-height: 500px;overflow-y: auto;">
+          <table class="table table-hover mt-2">
+            <thead>
+              <th class="text-center">
+                <input class="form-check-input check-all" type="checkbox">
+              </th>
+              <th class="text-center">모델명</th>
+              <th class="text-center">제품명</th>
+              <th class="text-center">패턴 (컬러)</th>
+              <th class="text-center">2차 패턴</th>
+              <th class="text-center">수량</th>
+              <th class="text-center">가격표상 단가</th>
+              <th class="text-center">기준 단가</th>
+              <th class="text-center">기존 공급가</th>
+              <th class="text-center">할인 단가</th>
+              <th class="text-center">할인 총액</th>
+              <th class="text-center">단가</th>
+              <th class="text-center">공급가</th>
+
+            </thead>
+            <tbody>
+              @@for(i=1; i < 11; i++){ <tr>
+                <td class="text-center">
+                  <input class="form-check-input" type="checkbox">
+                </td>
+                <td class="text-center">CSK-UL10</td>
+                <td class="text-center">USB Port Lock</td>
+                <td class="text-center">AB</td>
+                <td class="text-center"></td>
+                <td class="text-center">100</td>
+                <td class="text-center">1,327</td>
+                <td class="text-center">1,327</td>
+                <td class="text-center">132,700</td>
+                <td class="text-center">0.00</td>
+                <td class="text-center">0</td>
+                <td class="text-center">1,327</td>
+                <td class="text-center">132,700</td>
+                </tr>
+                }
+            </tbody>
+          </table>
+          <script>
+            var $listCheckAll = $("#pattern-table .check-all");
+            var $listCheckItems = $("#pattern-table tbody .form-check-input");
+            $listCheckAll.on("change", function () {
+              var isChecked = $(this).is(':checked');
+              $listCheckItems.prop("checked", isChecked);
+            });
+            $listCheckItems.on("change", function () {
+              if ($listCheckItems.filter(":checked").length == $listCheckItems.length) {
+                $listCheckAll.prop('checked', true);
+              } else {
+                $listCheckAll.prop('checked', false);
+              }
+            });
+          </script>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">저장</button>
+        <button type="button" class="btn btn-green">Excel</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 서류 첨부 -->
+<div class="modal" tabindex="-1" id="modal-attach-documents" data-overlap="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">서류 첨부</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="hstack gap-2 justify-content-end">
+          <button type="button" class="btn btn-sm btn-primary">첨부파일</button>
+        </div>
+        <div style="max-height: 500px;overflow-y: auto;">
+          <table class="table table-hover mt-2">
+            <colgroup>
+              <col>
+              <col width="60%">
+              <col>
+              <col>
+              <col>
+            </colgroup>
+            <thead>
+              <th class="text-center">번호</th>
+              <th class="text-center">파일명</th>
+              <th class="text-center">등록일자</th>
+              <th class="text-center">크기</th>
+              <th class="text-center">다운로드</th>
+            </thead>
+            <tbody>
+              @@for(i=1; i < 11; i++){ <tr>
+                <td class="text-center">`+ i +`</td>
+                <td class="text-center">CXI-CIPL-240207-002_SLS - 일반(11) - 수입통관.xlsx</td>
+                <td class="text-center">2024-05-08</td>
+                <td class="text-center">2.0MB</td>
+                <td class="text-center">
+                  <a download="">다운로드</a>
+                </td>
+                </tr>
+                }
+            </tbody>
+          </table>
+          <script>
+            var $listCheckAll = $("#pattern-table .check-all");
+            var $listCheckItems = $("#pattern-table tbody .form-check-input");
+            $listCheckAll.on("change", function () {
+              var isChecked = $(this).is(':checked');
+              $listCheckItems.prop("checked", isChecked);
+            });
+            $listCheckItems.on("change", function () {
+              if ($listCheckItems.filter(":checked").length == $listCheckItems.length) {
+                $listCheckAll.prop('checked', true);
+              } else {
+                $listCheckAll.prop('checked', false);
+              }
+            });
+          </script>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 제품 발송 정보 -->
+<div class="modal" tabindex="-1" id="modal-delivery-info2">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">제품 발송 정보</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-sticky mb-6">
+          <colgroup>
+            <col style="width: 120px">
+            <col>
+            <col style="width: 120px">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>
+                발송 일자
+              </th>
+              <td colspan="3">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected="">전체</option>
+                  <option value="1">전체</option>
+                  <option value="2">전체</option>
+                  <option value="3">전체</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>
+                배송사
+              </th>
+              <td>
+                DHL
+              </td>
+              <th class="text-center">
+                <span class="text-danger">*</span>
+                Tracking No
+              </th>
+              <td>
+                123456789
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">발송 수정</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 제품 발송 정보 - 배송 완료일-->
+<div class="modal" tabindex="-1" id="modal-delivery-info3">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">제품 발송 정보</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-sticky mb-6">
+          <colgroup>
+            <col style="width: 120px">
+            <col>
+
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>
+                배송완료 일자
+              </th>
+              <td colspan="3">
+                <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">배송 완료</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 제품 발송 처리 -->
+<div class="modal" tabindex="-1" id="modal-delivery-process">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">제품 발송 처리</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-sticky mb-6">
+          <colgroup>
+            <col style="width: 120px">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>
+                발송 일자
+              </th>
+              <td>
+                <div class="d-flex align-items-center gap-2">
+                  <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                  <button type="button" class="btn btn-sm btn-primary">발송</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>
+                배송사
+              </th>
+              <td>
+                <input type="text" class="form-control" value="DHL">
+              </td>
+
+            </tr>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>
+                Tracking No
+              </th>
+              <td>
+                <input type="text" class="form-control" value="123456789">
+              </td>
+            </tr>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>
+                링크주소
+              </th>
+              <td>
+                <input type="text" class="form-control" value="https://www.naver.com">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 제품 발송 처리 - 완료 일자-->
+<div class="modal" tabindex="-1" id="modal-delivery-process2">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">제품 발송 처리</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-sticky mb-6">
+          <colgroup>
+            <col style="width: 120px">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>
+                발송완료 일자
+              </th>
+              <td colspan="3">
+                <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">배송완료수정</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 발주 수정 승인 -->
+<div class="modal" tabindex="-1" id="modal-ordering-approval" data-overlap="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">발주 수정 승인</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="alert-message text-start">
+          발주자가 발주를 수정하였습니다. 발주 수정 요청을 승인하려면 수정 승인 버튼을 클릭하세요
+        </p>
+        <textarea name="" id="" class="form-control mt-4">배송 일정 등 수정에 따른 관리자 코멘트</textarea>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">수정 승인</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- modal: 발주 수정 거절 -->
+<div class="modal" tabindex="-1" id="modal-ordering-modify-refusal" data-overlap="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">발주 접수 취소</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="alert-message text-start">
+          발주자가 발주를 수정하였습니다. 발주 수정 요청을 거절 하고자하면 거절 사유를 입력하고 거절 버튼을 클릭하세요
+        </p>
+        <textarea name="" id="" class="form-control mt-4">제품이 이미 발송되었습니다.</textarea>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">거절</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
