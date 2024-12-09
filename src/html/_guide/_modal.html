@@ -117,7 +117,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <h3 class="table-title">Master ID​</h3>
+        <p class="table-title">Master ID​</p>
         <table class="table table-bordered table-sticky" id="tableContestList">
           <colgroup>
             <col width="120px">
@@ -2720,7 +2720,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
-        <p class="modal-title">발주 접수 취소</p>
+        <p class="modal-title">발주 수정 거절</p>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -2731,6 +2731,1318 @@
       </div>
       <div class="modal-footer gap-2">
         <button type="button" class="btn btn-primary">거절</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- modal: 입고관리- 입고처리 -->
+<div class="modal" tabindex="-1" id="modal-incoming-list">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">입고 처리</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="incoming-list" data-bs-toggle="tab" data-bs-target="#incoming-tab"
+              type="button" role="tab" aria-controls="incoming-tab" aria-selected="true">입고 내역</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="incoming-modify" data-bs-toggle="tab" data-bs-target="#incoming-modify-tab"
+              type="button" role="tab" aria-controls="incoming-modify-tab" aria-selected="false">입고 수정 내역</button>
+          </li>
+        </ul>
+
+        <div class="tab-content mt-6" id="myTabContent">
+          <div class="tab-pane fade show active" id="incoming-tab" role="tabpanel" aria-labelledby="incoming-list">
+            <table class="table table-hover table-sticky table-bordered table-bordered2">
+              <thead>
+                <tr>
+                  <th class="text-center">발주업체</th>
+                  <th class="text-center">발주구분</th>
+                  <th class="text-center">발주번호</th>
+                  <th class="text-center">배송완료일</th>
+                  <th class="text-center">입고단계</th>
+                  <th class="text-center">입고수정</th>
+                  <th class="text-center">자동입고 예정일</th>
+                  <th class="text-center">입고완료일</th>
+                  <th class="text-center">입고번호</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">Smart Light Solution</td>
+                  <td class="text-center">일반</td>
+                  <td class="text-center">SK2023110501</td>
+                  <td class="text-center">20240505</td>
+                  <td class="text-center">입고 완료</td>
+                  <td class="text-center">N/A</td>
+                  <td class="text-center">수동입고 대상</td>
+                  <td class="text-center">20230505</td>
+                  <td class="text-center">R-SLS-230427-2</td>
+                </tr>
+              </tbody>
+            </table>
+            <div>
+              <p class="table-title mt-6">입고 수정 내용</p>
+              <textarea name="" id="" class="form-control">
+                UL03PK YL 5EA 발주하였는데 배송된 제품은 UL03PK DB 임
+                NL03P1 BK 6EA 발주하였으나, 배송된 제품은 5EA 임
+                발주하지 않은 Universal Lock Key 3 5 EA  포함되어 있음
+              </textarea>
+              <div class="d-flex justify-content-end gap-2 mt-6">
+                <button type="button" class="btn btn-primary">업체 수정 확인</button>
+                <button type="button" class="btn btn-gray">입고 수정 거절</button>
+              </div>
+            </div>
+            <div class="scroll-layout">
+              <div class="scroll-content">
+                <table class="table table-hover mt-6">
+                  <thead>
+                    <th class="text-center">번호</th>
+                    <th class="text-center">수정 차수</th>
+                    <th class="text-center">발주 구분</th>
+                    <th class="text-center">수정사유</th>
+                    <th class="text-center">구분</th>
+                    <th class="text-center">모델명</th>
+                    <th class="text-center">제품명</th>
+                    <th class="text-center">패턴 (컬러)</th>
+                    <th class="text-center">2차 패턴</th>
+                    <th class="text-center">수량</th>
+                    <th class="text-center">단가</th>
+                    <th class="text-center">공급가</th>
+                    <th class="text-center">국가</th>
+                    <th class="text-center">신규여부</th>
+                    <th class="text-center">유통사</th>
+                    <th class="text-center">최종고객사</th>
+                    <th class="text-center">지사/ 부서</th>
+                    <th class="text-center">시리얼</th>
+                    <th class="text-center">비고</th>
+                  </thead>
+                  <tbody>
+                    @@for(i=1; i < 11; i++){ <tr>
+                      <td class="text-center">`+ i +`</td>
+                      <td class="text-center"></td>
+                      <td class="text-center">일반</td>
+                      <td class="text-center"></td>
+                      <td class="text-center">PRO</td>
+                      <td class="text-center">CSK-UL10</td>
+                      <td class="text-center">USB Port Lock</td>
+                      <td class="text-center">AB</td>
+                      <td class="text-center"></td>
+                      <td class="text-center">100</td>
+                      <td class="text-center">1,327</td>
+                      <td class="text-center">132,700</td>
+                      <td class="text-center">NL</td>
+                      <td class="text-center">NEW</td>
+                      <td class="text-center">HART4TECH</td>
+                      <td class="text-center">NN Group</td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      </tr>
+                      }
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end mt-6 gap-2">
+              <button type="button" class="btn btn-green">Excel</button>
+              <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="incoming-modify-tab" role="tabpanel" aria-labelledby="incoming-modify">
+            <table class="table table-hover table-sticky table-bordered table-bordered2">
+              <thead>
+                <tr>
+                  <th class="text-center">발주업체</th>
+                  <th class="text-center">발주구분</th>
+                  <th class="text-center">발주번호</th>
+                  <th class="text-center">배송완료일</th>
+                  <th class="text-center">입고단계</th>
+                  <th class="text-center">입고수정</th>
+                  <th class="text-center">자동입고 예정일</th>
+                  <th class="text-center">입고완료일</th>
+                  <th class="text-center">입고번호</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">Smart Light Solution</td>
+                  <td class="text-center">일반</td>
+                  <td class="text-center">SK2023110501</td>
+                  <td class="text-center">20240505</td>
+                  <td class="text-center">입고 완료</td>
+                  <td class="text-center">입고 수정 승인(<span>2</span>)</td>
+                  <td class="text-center"><a href="javascript:void(0)">2024-05-11</a></td>
+                  <td class="text-center">2023-04-30</td>
+                  <td class="text-center">R-SLS-230427-2</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="scroll-layout">
+              <div class="scroll-content">
+                <table class="table table-hover mt-6">
+                  <thead>
+                    <th class="text-center">번호</th>
+                    <th class="text-center">수정 차수</th>
+                    <th class="text-center">발주 구분</th>
+                    <th class="text-center">수정사유</th>
+                    <th class="text-center">구분</th>
+                    <th class="text-center">모델명</th>
+                    <th class="text-center">제품명</th>
+                    <th class="text-center">패턴 (컬러)</th>
+                    <th class="text-center">2차 패턴</th>
+                    <th class="text-center">수량</th>
+                    <th class="text-center">단가</th>
+                    <th class="text-center">공급가</th>
+                    <th class="text-center">국가</th>
+                    <th class="text-center">신규여부</th>
+                    <th class="text-center">유통사</th>
+                    <th class="text-center">최종고객사</th>
+                    <th class="text-center">지사/ 부서</th>
+                    <th class="text-center">시리얼</th>
+                    <th class="text-center">비고</th>
+                  </thead>
+                  <tbody>
+                    @@for(i=1; i < 11; i++){ <tr>
+                      <td class="text-center">`+ i +`</td>
+                      <td class="text-center"></td>
+                      <td class="text-center">일반</td>
+                      <td class="text-center"></td>
+                      <td class="text-center">PRO</td>
+                      <td class="text-center">CSK-UL10</td>
+                      <td class="text-center">USB Port Lock</td>
+                      <td class="text-center">AB</td>
+                      <td class="text-center"></td>
+                      <td class="text-center">100</td>
+                      <td class="text-center">1,327</td>
+                      <td class="text-center">132,700</td>
+                      <td class="text-center">NL</td>
+                      <td class="text-center">NEW</td>
+                      <td class="text-center">HART4TECH</td>
+                      <td class="text-center">NN Group</td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      </tr>
+                      }
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end mt-6">
+              <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- modal: 입고관리- 입고 수정 요청 내역 -->
+<div class="modal" tabindex="-1" id="modal-incoming-modify">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">입고 수정 요청 내역</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <p class="table-title mt-6">수정 요청 내용</p>
+          <textarea name="" id="" class="form-control">
+            아래와 같은 내용으로 입고 수정을 요청 드립니다.
+          </textarea>
+        </div>
+        <div class="scroll-layout">
+          <div class="scroll-content">
+            <table class="table table-hover mt-6">
+              <thead>
+                <tr>
+                  <th class="text-center">번호</th>
+                  <th class="text-center"></th>
+                  <th class="text-center">발주 구분</th>
+                  <th class="text-center">수정사유</th>
+                  <th class="text-center">구분</th>
+                  <th class="text-center">모델명</th>
+                  <th class="text-center">제품명</th>
+                  <th class="text-center">패턴 (컬러)</th>
+                  <th class="text-center">2차 패턴</th>
+                  <th class="text-center">수량</th>
+                  <th class="text-center">단가</th>
+                  <th class="text-center">공급가</th>
+                  <th class="text-center">국가</th>
+                  <th class="text-center">신규여부</th>
+                  <th class="text-center">유통사</th>
+                  <th class="text-center">최종고객사</th>
+                  <th class="text-center">지사/ 부서</th>
+                  <th class="text-center">시리얼</th>
+                  <th class="text-center">비고</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">2</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">일반</td>
+                  <td class="text-center">패턴오류</td>
+                  <td class="text-center">ESS</td>
+                  <td class="text-center">UL03PK</td>
+                  <td class="text-center">USB Port Lock 6</td>
+                  <td class="text-center">DB</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">10</td>
+                  <td class="text-center">9,700</td>
+                  <td class="text-center">97,000</td>
+                  <td class="text-center">UK</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">Amazon</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">수정 승인</button>
+        <button type="button" class="btn btn-green">Excel</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- modal: 위탁관리- 위탁정산내역 -->
+<div class="modal" tabindex="-1" id="modal-consignment-list">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">위탁 정산 내역</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-sticky table-bordered table-bordered2">
+          <tbody>
+            <tr>
+              <th class="text-center">Smart Light Solution</th>
+              <th class="text-center">정산월</th>
+              <td class="text-center">2023년 7월</td>
+              <th class="text-center">정산 여부</th>
+              <td class="text-center">미 승인</td>
+              <th class="text-center">정산번호</th>
+              <td class="text-center">SLS-C231110-00001</td>
+              <th class="text-center">정산 금액</th>
+              <td class="text-center">8,888,888</td>
+            </tr>
+          </tbody>
+        </table>
+        <div>
+          <p class="table-title mt-6"><span class="text-danger">*</span>요청 사항</p>
+          <textarea name="" id="" class="form-control"></textarea>
+          <div class="d-flex justify-content-end gap-2 mt-6">
+            <button type="button" class="btn btn-primary">정산 승인</button>
+            <button type="button" class="btn btn-gray">정산 거절</button>
+          </div>
+        </div>
+        <div class="scroll-layout">
+          <div class="scroll-content">
+            <table class="table table-hover mt-6">
+              <thead>
+                <tr>
+                  <th class="text-center">번호</th>
+                  <th class="text-center"></th>
+                  <th class="text-center">구분</th>
+                  <th class="text-center"><span class="text-danger">*</span>모델명</th>
+                  <th class="text-center"><span class="text-danger">*</span>제품명</th>
+                  <th class="text-center">패턴 (컬러)</th>
+                  <th class="text-center">2차 패턴</th>
+                  <th class="text-center">재고 수량</th>
+                  <th class="text-center"><span class="text-danger">*</span>정산 수량</th>
+                  <th class="text-center">정산 금액</th>
+                  <th class="text-center">국가</th>
+                  <th class="text-center">신규여부</th>
+                  <th class="text-center">유통사</th>
+                  <th class="text-center">최종고객사</th>
+                  <th class="text-center">지사/ 부서</th>
+                  <th class="text-center">시리얼</th>
+                  <th class="text-center">비고</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">2</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">일반</td>
+                  <td class="text-center">패턴오류</td>
+                  <td class="text-center">ESS</td>
+                  <td class="text-center">UL03PK</td>
+                  <td class="text-center">USB Port Lock 6</td>
+                  <td class="text-center">DB</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">10</td>
+                  <td class="text-center">9,700</td>
+                  <td class="text-center">97,000</td>
+                  <td class="text-center">UK</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">Amazon</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th class="text-center">합계</th>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center">2,156</td>
+                  <td class="text-center">8,970,000</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">할인적용</button>
+        <button type="button" class="btn btn-green">Excel</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 위탁관리- 최종 정산내역 -->
+<div class="modal" tabindex="-1" id="modal-consignment-total">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">최종 정산 내역</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-sticky table-bordered table-bordered2">
+          <tbody>
+            <tr>
+              <th class="text-center" rowspan="2">Smart Light Solution</th>
+              <th class="text-center">정산월</th>
+              <td class="text-center">2023년 7월</td>
+              <th class="text-center">정산 여부</th>
+              <td class="text-center">미 승인</td>
+              <th class="text-center">최종 정산번호</th>
+              <td class="text-center">SLS-C231110-00001</td>
+              <th class="text-center">정산 요청 금액</th>
+              <td class="text-center bg-yellow500">8,888,888</td>
+            </tr>
+            <tr>
+              <th class="text-center">정산 일자</th>
+              <td class="text-center">2023-08-08</td>
+              <th class="text-center">정산 승인일자</th>
+              <td class="text-center">2023-08-08</td>
+              <th class="text-center">승인 담당자</th>
+              <td class="text-center">오진욱</td>
+              <th class="text-center">최종 정산 승인금액</th>
+              <td class="text-center bg-orange200">8,888,888</td>
+            </tr>
+          </tbody>
+        </table>
+        <div>
+          <p class="table-title mt-6"><span class="text-danger">*</span>요청 사항</p>
+          <textarea name="" id="" class="form-control"></textarea>
+        </div>
+        <div class="scroll-layout">
+          <div class="scroll-content">
+            <table class="table table-hover mt-6">
+              <thead>
+                <tr>
+                  <th class="text-center">정산번호</th>
+                  <th class="text-center">구분</th>
+                  <th class="text-center"><span class="text-danger">*</span>모델명</th>
+                  <th class="text-center"><span class="text-danger">*</span>제품명</th>
+                  <th class="text-center">패턴 (컬러)</th>
+                  <th class="text-center">2차 패턴</th>
+                  <th class="text-center">재고 수량</th>
+                  <th class="text-center"><span class="text-danger">*</span>정산 수량</th>
+                  <th class="text-center">정산 금액</th>
+                  <th class="text-center">국가</th>
+                  <th class="text-center">신규여부</th>
+                  <th class="text-center">유통사</th>
+                  <th class="text-center">최종고객사</th>
+                  <th class="text-center">지사/ 부서</th>
+                  <th class="text-center">시리얼</th>
+                  <th class="text-center">비고</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center"><a href="javascript:void(0)">2024/10/24-1</a></td>
+                  <td class="text-center">PRO</td>
+                  <td class="text-center">CSK-UL10</td>
+                  <td class="text-center">USB PORT LOCK</td>
+                  <td class="text-center">AB</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">200</td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">160,000</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">NEW</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">BAE SYSTEM</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th class="text-center">합계</th>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center">2,156</td>
+                  <td class="text-center">8,970,000</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-green">Excel</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- modal: 위탁관리 정산 승인 -->
+<div class="modal" tabindex="-1" id="modal-consignment-approval" data-overlap="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">정산 승인</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="alert-message text-start">
+          2023년 07월 정산내역에 대해서 승인 하시겠습니까?
+        </p>
+        <textarea name="" id="" class="form-control mt-4">배송 일정 등 수정에 따른 관리자 코멘트</textarea>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">정산 승인</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- modal: 위탁관리 정산 거절 -->
+<div class="modal" tabindex="-1" id="modal-consignment-modify-refusal" data-overlap="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">정산 거절</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="alert-message text-start">
+          2023년 07월 정산내역을 거절 하시겠습니까?
+          (거절 사유를 요청 사항 필드에 입력 후 거절 버튼 클릭해 주세요)
+        </p>
+        <textarea name="" id="" class="form-control mt-4">LG전자 맥시코건을 포함해서 다시 정산 요청을 해주세요</textarea>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">정산 거절</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- modal: 위탁관리 - 위탁재고조회 -->
+<div class="modal" tabindex="-1" id="modal-consignment-management">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">위탁관리</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="consignment1" data-bs-toggle="tab" data-bs-target="#consignment-tab1"
+              type="button" role="tab" aria-controls="consignment-tab2" aria-selected="true">정산세부내역</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="consignment2" data-bs-toggle="tab" data-bs-target="#consignment-tab2"
+              type="button" role="tab" aria-controls="consignment-tab2" aria-selected="false">위탁재고 조회</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="consignment3" data-bs-toggle="tab" data-bs-target="#consignment-tab3"
+              type="button" role="tab" aria-controls="consignment-tab3" aria-selected="false">위탁재고 입출고</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="consignment4" data-bs-toggle="tab" data-bs-target="#consignment-tab4"
+              type="button" role="tab" aria-controls="consignment-tab4" aria-selected="false">위탁재고조정내역</button>
+          </li>
+        </ul>
+
+        <div class="tab-content mt-6" id="myTabContent">
+          <div class="tab-pane fade show active" id="consignment-tab1" role="tabpanel" aria-labelledby="consignment1">
+            <div class="filter-wrap">
+              <table class="table table-bordered table-sticky">
+                <colgroup>
+                  <col style="width: 216px">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th class="text-center">기준일자​</th>
+                    <td>
+                      <div class="row g-2 align-items-center">
+                        <div class="col-auto">
+                          <input type="radio" class="btn-check" id="type1" autocomplete="off" name="dayType">
+                          <label class="btn btn-outline-secondary btn-sm" for="type1">1개월</label>
+                          <input type="radio" class="btn-check" id="type2" autocomplete="off" name="dayType">
+                          <label class="btn btn-outline-secondary btn-sm" for="type2">6개월</label>
+                          <input type="radio" class="btn-check" id="type3" autocomplete="off" name="dayType">
+                          <label class="btn btn-outline-secondary btn-sm" for="type3">1년</label>
+                        </div>
+                        <div class="col-auto">
+                          <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                        </div>
+                        <div class="col-auto">~</div>
+                        <div class="col-auto">
+                          <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-center">구분</th>
+                    <td>
+                      <div class="py-2">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState1">
+                          <label class="form-check-label" for="idState1">ALL</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState2">
+                          <label class="form-check-label" for="idState2">PRO</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState3">
+                          <label class="form-check-label" for="idState3">ESS</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState4">
+                          <label class="form-check-label" for="idState4">Sample</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState5">
+                          <label class="form-check-label" for="idState5">ETC</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-center">제품 선택</th>
+                    <td>
+                      <button type="button" class="btn btn-outline-gray px-3" aria-label="검색" data-bs-toggle="modal"
+                        data-bs-target="#modal-">
+                        <i class="icon-search"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="d-flex mt-2 align-items-center justify-content-end">
+                <div class="hstack gap-2">
+                  <p class="mr-2">2023-11-24 ~ 2024-03-24</p>
+                  <button type="button" class="btn btn-gray">검색</button>
+                </div>
+              </div>
+            </div>
+            <div class="scroll-layout">
+              <div class="scroll-content">
+                <table class="table mt-6">
+                  <thead>
+                    <th class="text-center">번호</th>
+                    <th class="text-center">정산월</th>
+                    <th class="text-center">정산여부</th>
+                    <th class="text-center">정산번호</th>
+                    <th class="text-center">구분</th>
+                    <th class="text-center">정산 금액</th>
+                    <th class="text-center">비고</th>
+                  </thead>
+                  <tbody>
+                    @@for(i=1; i < 4; i++){ <tr>
+                      <td class="text-center">`+ i +`</td>
+                      <td class="text-center">2023년 10월</td>
+                      <td class="text-center">정산예정</td>
+                      <td class="text-center"><a href="javascript:void(0)">2024/10/24-1</a></td>
+                      <td class="text-center"><a href="javascript:void(0)">PRO + ESS</a></td>
+                      <td class="text-center">860,000</td>
+                      <td class="text-center"></td>
+                      </tr>
+                      }
+                      <tr>
+                        <td class="text-center bg-green50 fw-bold" colspan="3">2023년 10월</td>
+                        <td class="text-center bg-green50"></td>
+                        <td class="text-center bg-green50 fw-bold">정산 예정</td>
+                        <td class="text-center bg-green50"></td>
+                        <td class="text-center bg-green50"></td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end mt-6 ">
+              <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="consignment-tab2" role="tabpanel" aria-labelledby="consignment2">
+            <div class="filter-wrap">
+              <table class="table table-bordered table-sticky">
+                <colgroup>
+                  <col style="width: 216px">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th class="text-center">기준일자​</th>
+                    <td>
+                      <div class="row g-2 align-items-center">
+                        <div class="col-auto">
+                          <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-center">구분</th>
+                    <td>
+                      <div class="py-2">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState1">
+                          <label class="form-check-label" for="idState1">ALL</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState2">
+                          <label class="form-check-label" for="idState2">PRO</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState3">
+                          <label class="form-check-label" for="idState3">ESS</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState4">
+                          <label class="form-check-label" for="idState4">Sample</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState5">
+                          <label class="form-check-label" for="idState5">ETC</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-center">제품 선택</th>
+                    <td>
+                      <button type="button" class="btn btn-outline-gray px-3" aria-label="검색" data-bs-toggle="modal"
+                        data-bs-target="#modal-">
+                        <i class="icon-search"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="d-flex mt-2 align-items-center justify-content-end">
+                <div class="hstack">
+                  <button type="button" class="btn btn-gray">검색</button>
+                </div>
+              </div>
+            </div>
+            <div class="scroll-layout">
+              <div class="scroll-content">
+                <table class="table mt-6">
+                  <thead>
+                    <th class="text-center">구분</th>
+                    <th class="text-center">모델명</th>
+                    <th class="text-center">제품명</th>
+                    <th class="text-center">1차 패턴(컬러)</th>
+                    <th class="text-center">2차 패턴</th>
+                    <th class="text-center">재고수량 수량</th>
+                  </thead>
+                  <tbody>
+                    @@for(i=1; i < 4; i++){ <tr>
+                      <td class="text-center">PRO</td>
+                      <td class="text-center">CSK-UL10</td>
+                      <td class="text-center">USB PORT LOCK</td>
+                      <td class="text-center">AB</td>
+                      <td class="text-center"></td>
+                      <td class="text-center">200</td>
+                      </tr>
+                      }
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end mt-6  gap-2">
+              <button type="button" class="btn btn-green">Excel</button>
+              <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="consignment-tab3" role="tabpanel" aria-labelledby="consignment3">
+            <div class="filter-wrap">
+              <table class="table table-bordered table-sticky">
+                <colgroup>
+                  <col style="width: 216px">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th class="text-center">기준일자​</th>
+                    <td>
+                      <div class="row g-2 align-items-center">
+                        <div class="col-auto">
+                          <input type="radio" class="btn-check" id="type1" autocomplete="off" name="dayType">
+                          <label class="btn btn-outline-secondary btn-sm" for="type1">1개월</label>
+                          <input type="radio" class="btn-check" id="type2" autocomplete="off" name="dayType">
+                          <label class="btn btn-outline-secondary btn-sm" for="type2">6개월</label>
+                          <input type="radio" class="btn-check" id="type3" autocomplete="off" name="dayType">
+                          <label class="btn btn-outline-secondary btn-sm" for="type3">1년</label>
+                        </div>
+                        <div class="col-auto">
+                          <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                        </div>
+                        <div class="col-auto">~</div>
+                        <div class="col-auto">
+                          <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-center">구분</th>
+                    <td>
+                      <div class="py-2">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState1">
+                          <label class="form-check-label" for="idState1">PRO</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState2">
+                          <label class="form-check-label" for="idState2">ESS</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState3">
+                          <label class="form-check-label" for="idState3">Sample</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState4">
+                          <label class="form-check-label" for="idState4">ETC</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-center">제품 선택</th>
+                    <td>
+                      <button type="button" class="btn btn-outline-gray px-3" aria-label="검색" data-bs-toggle="modal"
+                        data-bs-target="#modal-">
+                        <i class="icon-search"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="d-flex mt-2 align-items-center justify-content-end">
+                <div class="hstack">
+                  <button type="button" class="btn btn-gray">검색</button>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <p>USB Port Lock AB</p>
+              <p>2023/05/07 ~ 2023/11/07​</p>
+            </div>
+            <div class="scroll-layout">
+              <div class="scroll-content" style="max-height: 810px;overflow-y: auto;">
+                <table class="table mt-6">
+                  <thead>
+                    <th class="text-center">구분</th>
+                    <th class="text-center text-danger">연결전표</th>
+                    <th class="text-center">구분</th>
+                    <th class="text-center">품목명</th>
+                    <th class="text-center">패턴</th>
+                    <th class="text-center">입고수량</th>
+                    <th class="text-center">정산번호</th>
+                    <th class="text-center">출고수량</th>
+                    <th class="text-center">국가</th>
+                    <th class="text-center">유통사</th>
+                    <th class="text-center">최종고객사</th>
+                    <th class="text-center">재고수량</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="11" class="text-center text-danger">전일재고</td>
+                      <td class="text-center">1,000</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center"><span class="text-danger">조정</span></td>
+                      <td class="text-center"><a href="javascript:void(0)">2024/10/24-1</a></td>
+                      <td class="text-center">PRO</td>
+                      <td class="text-center">USB포트락</td>
+                      <td class="text-center">AB</td>
+                      <td class="text-center bg-gray5">1,500</td>
+                      <td class="text-center"><a href="javascript:void(0)">2024/10/24-1</a></td>
+                      <td class="text-center bg-gray5">600</td>
+                      <td class="text-center">UK</td>
+                      <td class="text-center">NL-Hart4Technology</td>
+                      <td class="text-center">SLS(UK)-BAE SYSTEMS</td>
+                      <td class="text-center bg-gray5">1,900</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center bg-green50"></td>
+                      <td class="text-center bg-green50" colspan="4">2022/05 계</td>
+                      <td class="text-center bg-green50">2,500</td>
+                      <td class="text-center bg-green50"></td>
+                      <td class="text-center bg-green50">1,600</td>
+                      <td class="text-center bg-green50"></td>
+                      <td class="text-center bg-green50"></td>
+                      <td class="text-center bg-green50"></td>
+                      <td class="text-center bg-green50">1,900</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td class="text-center bg-green300"></td>
+                      <td colspan="4" class="text-center bg-green300">합계</td>
+                      <td class="text-center bg-green300">3,000</td>
+                      <td class="text-center bg-green300"></td>
+                      <td class="text-center bg-green300">3,000</td>
+                      <td class="text-center bg-green300"></td>
+                      <td class="text-center bg-green300"></td>
+                      <td class="text-center bg-green300"></td>
+                      <td class="text-center bg-green300">1,000</td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end mt-6  gap-2">
+              <button type="button" class="btn btn-green">Excel</button>
+              <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="consignment-tab4" role="tabpanel" aria-labelledby="consignment4">
+            <div class="filter-wrap">
+              <table class="table table-bordered table-sticky">
+                <colgroup>
+                  <col style="width: 216px">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th class="text-center">기준일자​</th>
+                    <td>
+                      <div class="row g-2 align-items-center">
+                        <div class="col-auto">
+                          <input type="radio" class="btn-check" id="type1" autocomplete="off" name="dayType">
+                          <label class="btn btn-outline-secondary btn-sm" for="type1">1개월</label>
+                          <input type="radio" class="btn-check" id="type2" autocomplete="off" name="dayType">
+                          <label class="btn btn-outline-secondary btn-sm" for="type2">6개월</label>
+                          <input type="radio" class="btn-check" id="type3" autocomplete="off" name="dayType">
+                          <label class="btn btn-outline-secondary btn-sm" for="type3">1년</label>
+                        </div>
+                        <div class="col-auto">
+                          <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                        </div>
+                        <div class="col-auto">~</div>
+                        <div class="col-auto">
+                          <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-center">구분</th>
+                    <td>
+                      <div class="py-2">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState1">
+                          <label class="form-check-label" for="idState1">ALL</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState2">
+                          <label class="form-check-label" for="idState2">PRO</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState3">
+                          <label class="form-check-label" for="idState3">ESS</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState4">
+                          <label class="form-check-label" for="idState4">Sample</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="idStateType" id="idState5">
+                          <label class="form-check-label" for="idState5">ETC</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-center">제품 선택</th>
+                    <td>
+                      <button type="button" class="btn btn-outline-gray px-3" aria-label="검색" data-bs-toggle="modal"
+                        data-bs-target="#modal-">
+                        <i class="icon-search"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="d-flex mt-2 align-items-center justify-content-end">
+                <div class="hstack">
+                  <button type="button" class="btn btn-gray">검색</button>
+                </div>
+              </div>
+            </div>
+            <div class="scroll-layout mt-6">
+              <div class="scroll-content" style="max-height: 515px;overflow-y: auto;">
+                <table class="table">
+                  <thead>
+                    <th class="text-center">
+                      <span>선택</span><br>
+                      <input class="form-check-input check-all" type="checkbox">
+                    </th>
+                    <th class="text-center">조정 요청일</th>
+                    <th class="text-center">구분</th>
+                    <th class="text-center">제품명</th>
+                    <th class="text-center">1차 패턴(컬러)</th>
+                    <th class="text-center">2차 패턴</th>
+                    <th class="text-center">전산재고</th>
+                    <th class="text-center">수정수량</th>
+                    <th class="text-center">조정 후 수량</th>
+                    <th class="text-center">정산적용 여부</th>
+                    <th class="text-center">승인일자</th>
+                    <th class="text-center">승인관리자</th>
+                    <th class="text-center">비고</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center"><input class="form-check-input check-all" type="checkbox"></td>
+                      <td class="text-center">2024-01-25</td>
+                      <td class="text-center">PRO</td>
+                      <td class="text-center">USB포트락</td>
+                      <td class="text-center">AB</td>
+                      <td class="text-center">T02</td>
+                      <td class="text-center">1,000</td>
+                      <td class="text-center">-50</td>
+                      <td class="text-center">950</td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      <td class="text-center">실물재고 부족</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center bg-gray5"></td>
+                      <td class="text-center bg-gray5">2024-01-25</td>
+                      <td class="text-center bg-gray5">PRO</td>
+                      <td class="text-center bg-gray5">USB포트락</td>
+                      <td class="text-center bg-gray5">AB</td>
+                      <td class="text-center bg-gray5">T02</td>
+                      <td class="text-center bg-gray5">1,000</td>
+                      <td class="text-center bg-gray5">-50</td>
+                      <td class="text-center bg-gray5">950</td>
+                      <td class="text-center bg-gray5">적용</td>
+                      <td class="text-center bg-gray5">2023-05-05</td>
+                      <td class="text-center bg-gray5">장승근</td>
+                      <td class="text-center bg-gray5">실물재고 부족</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end mt-6 gap-2">
+              <button type="button" class="btn btn-primary">선택승인</button>
+              <button type="button" class="btn btn-orange">선택거절</button>
+              <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- modal: 위탁관리 - 위탁 재고 조정 - 승인 및 거절창 -->
+<div class="modal" tabindex="-1" id="modal-consignment-modify">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">위탁 재고 조정 승인</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="scroll-layout">
+          <div class="scroll-content">
+            <table class="table table-hover mt-6">
+              <thead>
+                <tr>
+                  <th class="text-center">번호</th>
+                  <th class="text-center">조정 요청일</th>
+                  <th class="text-center">구분</th>
+                  <th class="text-center">제품명</th>
+                  <th class="text-center">1차 패턴(컬러)</th>
+                  <th class="text-center">2차 패턴</th>
+                  <th class="text-center">전산재고</th>
+                  <th class="text-center">수정수량<br>(요청수량)</th>
+                  <th class="text-center">조정 후<br>수량</th>
+                  <th class="text-center">승인여부</th>
+                  <th class="text-center">정산적용<br><input class="form-check-input check-all" type="checkbox"></th>
+                  <th class="text-center">요청사유</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td class="text-center">2024-01-25</td>
+                  <td class="text-center">PRO</td>
+                  <td class="text-center">USB PORT LOCK</td>
+                  <td class="text-center">AB</td>
+                  <td class="text-center">T02</td>
+                  <td class="text-center">1,000</td>
+                  <td class="text-center">-50</td>
+                  <td class="text-center">950</td>
+                  <td class="text-center">승인</td>
+                  <td class="text-center"><input class="form-check-input check-all" type="checkbox"></td>
+                  <td class="text-center">실물재고 부족</td>
+                </tr>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td class="text-center">2024-01-25</td>
+                  <td class="text-center">PRO</td>
+                  <td class="text-center">USB PORT LOCK</td>
+                  <td class="text-center">AB</td>
+                  <td class="text-center">T02</td>
+                  <td class="text-center">1,000</td>
+                  <td class="text-center">-50</td>
+                  <td class="text-center">950</td>
+                  <td class="text-center">승인</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">실물재고 부족</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <textarea name="" id="" class="form-control">
+            요청한 제품은 재고조정이 불가한 제품입니다. 
+          </textarea>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">조정 승인</button>
+        <button type="button" class="btn btn-orange">조정 거절</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 정산관리 - 결재 증빙 파일 보기 -->
+<div class="modal" tabindex="-1" id="modal-settlement-file">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">결재 증빙 파일 보기</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-sticky">
+          <colgroup>
+            <col style="width: 216px">
+            <col>
+            <col style="width: 216px">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center">결재예정일</th>
+              <td>2023/12/30</td>
+              <th class="text-center">입고번호 (위탁정산번호)</th>
+              <td><a href="javascript:void(0)">2023/12/30</a></td>
+            </tr>
+            <tr>
+              <th class="text-center">결재금액</th>
+              <td colspan="3" class="bg-yellow50">2023/12/30</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="scroll-layout">
+          <div class="scroll-content">
+            <table class="table table-hover mt-6">
+              <thead>
+                <tr>
+                  <th class="text-center">선택</th>
+                  <th class="text-center">항목</th>
+                  <th class="text-center">파일명</th>
+                  <th class="text-center">크기</th>
+                  <th class="text-center">다운로드</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center"></td>
+                  <td class="text-center">입금증</td>
+                  <td class="text-center">Auftragsbestätigung 900030051700301_06-03-2024_08-28</td>
+                  <td class="text-center">2MB</td>
+                  <td class="text-center"><a href="javascript:void(0)">다운로드</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 정산관리 - 결재 확인 -->
+<div class="modal" tabindex="-1" id="modal-settlement-confirm">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">결재 확인</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-sticky">
+          <colgroup>
+            <col style="width: 120px">
+            <col>
+            <col style="width: 120px">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>발주번호</th>
+              <td><a href="javascript:void(0)">2023/12/30</a></td>
+              <th>배송완료일</th>
+              <td>2023/05/05</td>
+            </tr>
+            <tr>
+              <th>입고여부</th>
+              <td>자동입고</td>
+              <th>입고번호</th>
+              <td>2023/04/22</td>
+            </tr>
+            <tr>
+              <th>결재예정일</th>
+              <td>2023/05/02</td>
+              <th>미수일</th>
+              <td>0 Day</td>
+            </tr>
+            <tr>
+              <th>결재상태</th>
+              <td>결재완료</td>
+              <th>결재금액</th>
+              <td>$2,350.36</td>
+            </tr>
+          </tbody>
+        </table>
+        <textarea name="" id="" class="form-control mt-4">
+          위 발주건 관련해서 대금결재가 되지 않았습니다. 확인하셔서 처리 요청 드립니다. 
+        </textarea>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">결재확인</button>
+        <button type="button" class="btn btn-orange">결재 요청</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 정산관리 - 이력조회 -->
+<div class="modal" tabindex="-1" id="modal-settlement-history">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">이력조회</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="max-height:362px;overflow-y:auto;">
+        <table class="table table-bordered table-sticky">
+          <thead>
+            <tr>
+              <th class="text-center">번호</th>
+              <th class="text-center"><a href="javascript:void(0)">관리자</a></th>
+              <th class="text-center">발송일시</th>
+              <th class="text-center">발송내용</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center">1</td>
+              <td class="text-center">오진욱</td>
+              <td class="text-center">2024/05/22 오후 3:40:53</td>
+              <td class="text-center"><a href="javascript:void(0)">보기</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
         <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
       </div>
     </div>

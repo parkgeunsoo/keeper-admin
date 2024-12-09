@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_navbar.html', {"dep1": "위탁관리"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "위탁관리"})
+      <div id="container">
+        <div class="page-top">
+          <h1 class="page-title d-none d-lg-block">위탁관리</h1>
+        </div>
+        <div class="contents">
+          <div class="filter-wrap">
+            <table class="table table-bordered table-sticky">
+              <colgroup>
+                <col style="width: 216px">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">업체 위탁 상태​</th>
+                  <td>
+                    <div class="py-2">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="" id="idState1">
+                        <label class="form-check-label" for="idState1">위탁 사용</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="" id="idState2">
+                        <label class="form-check-label" for="idState2">위탁 종료</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="" id="idState3">
+                        <label class="form-check-label" for="idState3">위탁 중지</label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex mt-2 align-items-center justify-content-end">
+              <div class="hstack gap-2">
+                <button type="button" class="btn btn-gray">검색조건</button>
+              </div>
+            </div>
+          </div>
+          <div style="max-height: 287px; overflow-y: auto" class="mb-4">
+            <table class="table table-hover table-sticky table-bordered table-bordered2">
+              <thead>
+                <tr>
+                  <th class="text-center">번호</th>
+                  <th class="text-center">업체명</th>
+                  <th class="text-center">위탁여부</th>
+                  <th class="text-center">위탁상품</th>
+                  <th class="text-center">업체상태</th>
+                  <th class="text-center">위탁종료(예정)일</th>
+                  <th class="text-center">자동 정산일</th>
+                  <th class="text-center">미 승인 정산요청</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td class="text-center"><a href="javascript:void(0)">Smart Light Solution</a></td>
+                  <td class="text-center"><a href="javascript:void(0)">YES</a></td>
+                  <td class="text-center">ESS</td>
+                  <td class="text-center">위탁사용</td>
+                  <td class="text-center">2024-05-05</td>
+                  <td class="text-center">매월 10일</td>
+                  <td class="text-center">Y</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="filter-wrap">
+            <table class="table table-bordered table-sticky">
+              <colgroup>
+                <col style="width: 216px">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">기준일자​</th>
+                  <td>
+                    <div class="row g-2 align-items-center">
+                      <div class="col-auto">
+                        <input type="radio" class="btn-check" id="type1" autocomplete="off" name="dayType">
+                        <label class="btn btn-outline-secondary btn-sm" for="type1">1개월</label>
+                        <input type="radio" class="btn-check" id="type2" autocomplete="off" name="dayType">
+                        <label class="btn btn-outline-secondary btn-sm" for="type2">6개월</label>
+                        <input type="radio" class="btn-check" id="type3" autocomplete="off" name="dayType">
+                        <label class="btn btn-outline-secondary btn-sm" for="type3">1년</label>
+                      </div>
+                      <div class="col-auto">
+                        <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                      </div>
+                      <div class="col-auto">~</div>
+                      <div class="col-auto">
+                        <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex mt-2 align-items-center justify-content-end">
+              <div class="hstack gap-2">
+                <p class="mr-2">2023-11-24 ~ 2024-03-24</p>
+                <button type="button" class="btn btn-gray">검색</button>
+              </div>
+            </div>
+          </div>
+          <div class="scroll-layout">
+            <div class="scroll-content" style="max-height: 581px; overflow-y: auto">
+              <table class="table table-hover table-sticky">
+                <thead>
+                  <th class="text-center">번호</th>
+                  <th class="text-center">업체</th>
+                  <th class="text-center">정산월</th>
+                  <th class="text-center">정산 금액</th>
+                  <th class="text-center">정산여부</th>
+                  <th class="text-center">자동 정산(예정)​일</th>
+                  <th class="text-center">승인여부</th>
+                  <th class="text-center">최종 정산 번호</th>
+                </thead>
+                <tbody>
+                  @@for( i=1; i < 12; i++){ <tr>
+                    <td class="text-center">`+ i +`</td>
+                    <td class="text-start">Smart Light Solution</td>
+                    <td class="text-center">2023년 11월</td>
+                    <td class="text-center">0</td>
+                    <td class="text-center">정산등록</td>
+                    <td class="text-center">2023-11-10</td>
+                    <td class="text-center">
+                      <a href="javascript:void(0)">미 승인</a>
+                    </td>
+                    <td class="text-center">
+                      <a href="javascript:void(0)">SLS-C231110-00001</a>
+                    </td>
+                    </tr>
+                    }
+                </tbody>
+              </table>
+            </div>
+          </div>
+          @@include('@@webRoot/html/_components/_pagination.html')
+          <!-- //container -->
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>
