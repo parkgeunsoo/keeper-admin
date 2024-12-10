@@ -133,3 +133,9 @@ $icons-24px: delete, g-back, toggler;
   width: 17px;
   height: 18px;
 }
+
+.icon-new {
+  border-radius:5px;
+  background-color:var(--bs-warning);font-size: 12px;
+  color:$white;text-align: center;font-style: normal;line-height: 16px;width: 17px;height: 17px;
+}

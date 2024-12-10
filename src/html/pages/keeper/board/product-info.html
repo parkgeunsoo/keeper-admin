@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_navbar.html', {"dep1": "게시판 관리", "dep2" : "제품 정보"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "게시판 관리", "dep2" : "제품 정보" })
+      <div id="container">
+        <div class="page-top">
+          <h1 class="page-title d-none d-lg-block">제품정보</h1>
+          <button type="button" class="btn btn-primary" onclick="document.location.href='product-form.html'">관리자
+            글쓰기</button>
+        </div>
+        <div class="contents">
+          <ul class="nav nav-tabs mb-10">
+            <li class="nav-item">
+              <a class="nav-link active disabled" aria-current="true" href="boardPro.html">RPO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="boardUsb.html">USB Security</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="boardNetwork.html">Network Security</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="boardOps.html">Other Port Security</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="boardAnti.html">Anti-Theft for Computer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="boardMemory.html">Memory</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="boardLock.html">LOCK KEY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="boardEtc.html">ETC</a>
+            </li>
+          </ul>
+          <div class="table-top mb-10 gap-2 justify-content-end">
+            <div class="hstack gap-2">
+              <select class="form-select w-auto">
+                <option selected="">제목</option>
+                <option value="1"></option>
+                <option value="2"></option>
+              </select>
+            </div>
+            <div class="form-field search d-flex gap-2">
+              <div class="input-form">
+                <i class="icon-search"></i>
+                <input type="text" class="form-control search-form" placeholder="제목" />
+                <button type="button" class="clear-button"> <i class="icon-input-close"></i> </button>
+              </div>
+              <button type="button" class="btn btn-dark">검색</button>
+            </div>
+          </div>
+
+          <div class="scroll-layout">
+            <div class="scroll-content" style="max-height: 582px;overflow-y: auto;">
+              <table class="table table-hover table-sticky table-bordered table-bordered2">
+                <thead>
+                  <tr>
+                    <th class="text-center">번호</th>
+                    <th class="text-center">구분</th>
+                    <th class="text-center">제품 분류</th>
+                    <th class="text-center">제품명</th>
+                    <th class="text-center">첨부파일</th>
+                    <th class="text-center">글쓴이</th>
+                    <th class="text-center">작성일</th>
+                    <th class="text-center">조회</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @@for( i=1; i < 18; i++){ <tr class="cursor-pointer" onclick="document.location.href='.html'">
+                    <td class="text-center">1</td>
+                    <td class="text-center text-danger">PRO</td>
+                    <td class="text-center">USB Security</td>
+                    <td class="text-center">USB Port Lock</td>
+                    <td class="text-center"><i class="icon-file"></i></td>
+                    <td class="text-center">오진욱</td>
+                    <td class="text-center">22/03/10</td>
+                    <td class="text-center">10</td>
+                    </tr>
+                    }
+                </tbody>
+              </table>
+            </div>
+          </div>
+          @@include('@@webRoot/html/_components/_pagination.html')
+          <!-- //container -->
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

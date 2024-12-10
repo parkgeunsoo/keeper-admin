@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_navbar.html', {"dep1": "게시판 관리", "dep2" : "글쓰기"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "게시판 관리", "dep2" : "글쓰기" })
+      <div id="container">
+        <div class="page-top">
+          <h1 class="page-title d-none d-lg-block">글쓰기</h1>
+        </div>
+        <div class="contents border-top border-bottom ">
+          <div class="scroll-layout">
+            <div class="scroll-content">
+              <table class="table table-details table-fixed">
+                <colgroup>
+                  <col style="width: 130px">
+                  <col>
+                  <col style="width: 130px">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>메뉴</th>
+                    <td><input type="text" disabled class="form-control"></td>
+                    <th>게시판 소분류</th>
+                    <td>
+                      <select class="form-select" aria-label="Default select">
+                        <option selected="">Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>공개여부</th>
+                    <td>
+                      <div class="py-2">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="" id="">
+                          <label class="form-check-label" for="">모두 공개</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="" id="">
+                          <label class="form-check-label" for="">특정업체만 공개</label>
+                        </div>
+                      </div>
+                    </td>
+                    <th>공지사항포함 여부</th>
+                    <td>
+                      <div class="py-2">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="" id="">
+                          <label class="form-check-label" for="">공지사항 포함</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="" id="">
+                          <label class="form-check-label" for="">비포함</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>공개 대상업체 선택</th>
+                    <td colspan="3">
+                      <button type="button" class="btn btn-outline-gray px-3" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>제목</th>
+                    <td colspan="3">
+                      <input type="text" class="form-control">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>첨부파일</th>
+                    <td colspan="3">
+                      <div class="row">
+                        <div class="col-auto">
+                          <input type="text" class="form-control" value="filename.pdf" disabled />
+                        </div>
+                        <div class="col-auto">
+                          <button type="button" class="btn btn-outline-gray px-3" aria-label="이미지 보기"
+                            data-bs-toggle="modal" data-bs-target="#modal-photo">
+                            <i class="icon-image"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="4">
+                      <textarea name="" id="" class="form-control">editor</textarea>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex pt-6 align-items-center justify-content-end">
+          <button type="button" class="btn btn-primary">저장</button>
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>
