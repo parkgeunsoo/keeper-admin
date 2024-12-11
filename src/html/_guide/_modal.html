@@ -2,7 +2,7 @@
 <!-- data-bs-backdrop="static"  << 여백 클릭시 안사라지는 팝업 처리 -->
 
 <!-- Alert: sample -->
-<div class="modal alert" tabindex="-1" id="alert-sample1">
+<div class="modal alert" tabindex="-1" id="alert-sample1" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body">
@@ -21,7 +21,7 @@
 <!-- //Alert: sample -->
 
 <!-- Alert: sample -->
-<div class="modal alert" tabindex="-1" id="alert-sample2">
+<div class="modal alert" tabindex="-1" id="alert-sample2" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body">
@@ -42,7 +42,7 @@
 <!-- //Alert: sample -->
 
 <!-- modal: 비밀번호 변경 -->
-<div class="modal" tabindex="-1" id="modal-password-reset">
+<div class="modal" tabindex="-1" id="modal-password-reset" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -71,7 +71,7 @@
 <!-- //modal: 비밀번호 찾기 -->
 
 <!-- modal: 관리자 추가​ -->
-<div class="modal" tabindex="-1" id="modal-add-admin">
+<div class="modal" tabindex="-1" id="modal-add-admin" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
     <div class="modal-content">
       <div class="modal-header">
@@ -109,7 +109,7 @@
 </div>
 
 <!-- modal: 회원정보 관리 - 1 -->
-<div class="modal" tabindex="-1" id="modal-member-1">
+<div class="modal" tabindex="-1" id="modal-member-1" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
@@ -142,7 +142,7 @@
             </tr>
             <tr>
               <th class="text-center">ID</th>
-              <td class="text-center">s.uhm​ </td>
+              <td class="text-center"><a href="javascript:void(0)">s.uhm​</a></td>
               <th class="text-center">ID 구분</th>
               <td class="text-center">Master ID​ </td>
               <th class="text-center">승인일​</th>
@@ -178,7 +178,7 @@
 </div>
 
 <!-- modal: 회원정보 관리2 subId1 -->
-<div class="modal" tabindex="-1" id="modal-member-2">
+<div class="modal" tabindex="-1" id="modal-member-2" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
@@ -207,7 +207,7 @@
             </tr>
             <tr>
               <th class="text-center">ID</th>
-              <td class="text-center">s.uhm​ </td>
+              <td class="text-center"><a href="javascript:void(0)">s.uhm​</a></td>
               <th class="text-center">ID 구분</th>
               <td class="text-center">Master ID​ </td>
               <th class="text-center">승인일​</th>
@@ -243,7 +243,7 @@
 
 
 <!-- modal: 기업 정보 관리 -->
-<div class="modal" tabindex="-1" id="modal-cp">
+<div class="modal" tabindex="-1" id="modal-cp" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
@@ -359,10 +359,6 @@
                 </tr>
               </tbody>
             </table>
-            <div class="d-flex justify-content-end gap-2 mt-6">
-              <button type="button" class="btn btn-primary">업체승인</button>
-              <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
-            </div>
           </div>
           <!--관리자정보--->
           <div class="tab-pane fade" id="panel2" role="tabpanel" aria-labelledby="tab2"
@@ -391,7 +387,7 @@
                 </tr>
                 <tr>
                   <th class="text-center">ID</th>
-                  <td class="text-center">s.uhm</td>
+                  <td class="text-center"><a href="javascript:void(0)">s.uhm​</a></td>
                   <th class="text-center">ID 구분</th>
                   <td class="text-center">Master ID</td>
                   <th class="text-center">승인일</th>
@@ -441,7 +437,7 @@
                 </tr>
                 <tr>
                   <th class="text-center">ID</th>
-                  <td class="text-center">s.uhm</td>
+                  <td class="text-center"><a href="javascript:void(0)">s.uhm​</a></td>
                   <th class="text-center">ID 구분</th>
                   <td class="text-center">Master ID</td>
                   <th class="text-center">승인일</th>
@@ -517,11 +513,12 @@
                 </tr>
               </tbody>
             </table>
-            <div class="d-flex justify-content-end mt-6">
-              <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
-            </div>
           </div>
         </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">업체승인</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
       </div>
     </div>
 
@@ -530,7 +527,7 @@
 
 
 <!-- modal: 회원관리-Master ID 관리 -->
-<div class="modal" tabindex="-1" id="modal-master-modify">
+<div class="modal" tabindex="-1" id="modal-master-modify" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
     <div class="modal-content">
       <div class="modal-header">
@@ -642,7 +639,7 @@
 </div>
 
 <!-- modal: 상품관리- 상품분류 등록 -->
-<div class="modal" tabindex="-1" id="modal-product-registration">
+<div class="modal" tabindex="-1" id="modal-product-registration" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -687,7 +684,7 @@
 </div>
 
 <!-- modal: 상품관리- 상품그룹 등록 -->
-<div class="modal" tabindex="-1" id="modal-product-registration2">
+<div class="modal" tabindex="-1" id="modal-product-registration2" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -750,7 +747,7 @@
 </div>
 
 <!-- modal: 상품등록 -->
-<div class="modal" tabindex="-1" id="modal-product-registration3">
+<div class="modal" tabindex="-1" id="modal-product-registration3" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
@@ -889,7 +886,7 @@
 
 
 <!-- modal: 개별 상품 정보 보기 (미리보기) -->
-<div class="modal" tabindex="-1" id="modal-product-preview" data-overlap="true">
+<div class="modal" tabindex="-1" id="modal-product-preview" data-overlap="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
@@ -952,7 +949,7 @@
 </div>
 
 <!-- modal: 등록 상품 리스트 -->
-<div class="modal" tabindex="-1" id="modal-contest-list">
+<div class="modal" tabindex="-1" id="modal-contest-list" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
@@ -1009,7 +1006,7 @@
 </div>
 
 <!-- modal: 패턴 정보 등록 / 수정 -->
-<div class="modal" tabindex="-1" id="modal-pattern" data-overlap="true">
+<div class="modal" tabindex="-1" id="modal-pattern" data-overlap="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
@@ -1100,34 +1097,36 @@
           <button type="button" class="btn btn-primary">패턴 정보 일괄 업로드</button>
           <button type="button" class="btn btn-orange">개별 패턴 추가</button>
         </div>
-        <table class="table table-hover mt-6">
-          <thead>
-            <th class="text-center">번호</th>
-            <th class="text-center"></th>
-            <th class="text-center">생성(추가)일</th>
-            <th class="text-center">모델명</th>
-            <th class="text-center">1차 패턴</th>
-            <th class="text-center">2차 패턴</th>
-            <th class="text-center">ERP코드</th>
-            <th class="text-center">수정일</th>
-            <th class="text-center">수정내용</th>
+        <div style="overflow-y:auto;max-height:707px;">
+          <table class="table table-hover mt-6">
+            <thead>
+              <th class="text-center">번호</th>
+              <th class="text-center"></th>
+              <th class="text-center">생성(추가)일</th>
+              <th class="text-center">모델명</th>
+              <th class="text-center">1차 패턴</th>
+              <th class="text-center">2차 패턴</th>
+              <th class="text-center">ERP코드</th>
+              <th class="text-center">수정일</th>
+              <th class="text-center">수정내용</th>
 
-          </thead>
-          <tbody>
-            @@for(i=1; i < 11; i++){ <tr>
-              <td class="text-center">`+ i +`</td>
-              <td class="text-center"></td>
-              <td class="text-center">2024-05-10</td>
-              <td class="text-center">CSK-UL10</td>
-              <td class="text-center">AB</td>
-              <td class="text-center">없음</td>
-              <td class="text-center">1S0201AB0270</td>
-              <td class="text-center"></td>
-              <td class="text-center"></td>
-              </tr>
-              }
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              @@for(i=1; i < 14; i++){ <tr>
+                <td class="text-center">`+ i +`</td>
+                <td class="text-center"></td>
+                <td class="text-center">2024-05-10</td>
+                <td class="text-center">CSK-UL10</td>
+                <td class="text-center">AB</td>
+                <td class="text-center">없음</td>
+                <td class="text-center">1S0201AB0270</td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                </tr>
+                }
+            </tbody>
+          </table>
+        </div>
         @@include('../_components/_pagination.html')
       </div>
       <div class="modal-footer gap-2">
@@ -1140,7 +1139,7 @@
 </div>
 
 <!-- modal: 패턴 정보 일괄 업로드 -->
-<div class="modal" tabindex="-1" id="modal-pattern-upload">
+<div class="modal" tabindex="-1" id="modal-pattern-upload" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
     <div class="modal-content">
       <div class="modal-header">
@@ -1148,29 +1147,25 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <p class="alert-message text-start">
+          제품별 패턴정보 엑셀 파일을 선택하여 일괄 업로드 해주세요.
+        </p>
         <div class="hstack gap-2 justify-content-end">
           <button type="button" class="btn btn-sm btn-gray">파일찾기</button>
           <button type="button" class="btn btn-sm btn-primary">업로드</button>
           <button type="button" class="btn btn-sm btn-outline-danger">선택삭제</button>
         </div>
-        <table class="table table-hover mt-2" id="pattern-table">
+        <table class="table table-hover mt-2">
           <colgroup>
-            <col width="10%">
             <col width="50%">
             <col width="20%">
           </colgroup>
           <thead>
-            <th class="text-center">
-              <input class="form-check-input check-all" type="checkbox">
-            </th>
             <th class="text-center">파일명</th>
             <th class="text-center">크기</th>
           </thead>
           <tbody>
             <tr>
-              <td class="text-center">
-                <input class="form-check-input" type="checkbox">
-              </td>
               <td class="text-start">
                 USB 포트락 패턴표.xls
               </td>
@@ -1178,21 +1173,6 @@
             </tr>
           </tbody>
         </table>
-        <script>
-          var $listCheckAll = $("#pattern-table .check-all");
-          var $listCheckItems = $("#pattern-table tbody .form-check-input");
-          $listCheckAll.on("change", function () {
-            var isChecked = $(this).is(':checked');
-            $listCheckItems.prop("checked", isChecked);
-          });
-          $listCheckItems.on("change", function () {
-            if ($listCheckItems.filter(":checked").length == $listCheckItems.length) {
-              $listCheckAll.prop('checked', true);
-            } else {
-              $listCheckAll.prop('checked', false);
-            }
-          });
-        </script>
       </div>
       <div class="modal-footer gap-2">
         <button type="button" class="btn btn-primary">적용</button>
@@ -1203,7 +1183,7 @@
 </div>
 
 <!-- modal: 임시저장 -->
-<div class="modal" tabindex="-1" id="modal-temporary-save" data-overlap="true">
+<div class="modal" tabindex="-1" id="modal-temporary-save" data-overlap="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -1225,7 +1205,7 @@
 </div>
 
 <!-- modal: 상품관리- 상품가격 그룹 등록 -->
-<div class="modal" tabindex="-1" id="modal-product-priceRegistration">
+<div class="modal" tabindex="-1" id="modal-product-priceRegistration" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -1266,8 +1246,11 @@
             </thead>
             <tbody>
               <tr>
+                <td class="text-center" colspan="2">상품가격 그룹을 추가하여 주세요.</td>
+              </tr>
+              <tr>
                 <td class="text-center">1</td>
-                <td class="text-center"><a href="#">L1</a></td>
+                <td class="text-center">L1</td>
               </tr>
             </tbody>
           </table>
@@ -1288,11 +1271,11 @@
 </div>
 
 <!-- modal: 업체설정 -->
-<div class="modal" tabindex="-1" id="modal-product-registration3">
+<div class="modal" tabindex="-1" id="modal-product-registration3" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
-        <p class="modal-title">상품등록</p>
+        <p class="modal-title">업체설정</p>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -1551,6 +1534,7 @@
                       </div>
                       <div class="d-flex align-items-center gap-2">
                         <button type="button" class="btn btn-sm btn-gray">파일찾기</button>
+                        <button type="button" class="btn btn-sm btn-primary">업로드</button>
                         <button type="button" class="btn btn-sm btn-outline-danger">선택삭제</button>
                       </div>
                     </div>
@@ -1628,7 +1612,7 @@
                     </tbody>
                   </table>
                 </div>
-                <table class="table table-hover table-sticky">
+                <table class="table table-hover">
                   <colgroup>
                     <col width="120px">
                   </colgroup>
@@ -1684,10 +1668,11 @@
                     </tbody>
                   </table>
                 </div>
-                <div style="max-height: 383px;overflow-y: auto;">
-                  <table class="table table-hover mt-6" id="product-table">
+                <div style="max-height: 383px;overflow-y: auto;" class="mt-6">
+                  <table class="table table-hover" id="product-table">
                     <thead>
                       <th class="text-center">
+                        <span>선택</span><br>
                         <input class="form-check-input check-all" type="checkbox">
                       </th>
                       <th class="text-center">분류</th>
@@ -1756,7 +1741,7 @@
           <!-- 위탁 설정 --->
           <div class="tab-pane fade" id="panel6" role="tabpanel" aria-labelledby="tab6">
             <div class="filter-wrap">
-              <table class="table table-bordered table-sticky">
+              <table class="table table-bordered">
                 <colgroup>
                   <col style="width: 216px">
                   <col>
@@ -1794,7 +1779,10 @@
                 </tbody>
               </table>
             </div>
-            <table class="table table-hover table-sticky">
+            <div class="hstack justify-content-end mb-2">
+              <button type="button" class="btn btn-sm btn-outline-danger">선택삭제</button>
+            </div>
+            <table class="table table-hover">
               <colgroup>
                 <col width="120px">
               </colgroup>
@@ -1811,12 +1799,12 @@
               <tbody>
                 @@for( i=1; i < 11; i++){ <tr>
                   <td class="text-center">`+ i +`</td>
-                  <td class="text-center">PRO</td>
                   <td class="text-center">
                     <div class="form-check d-flex justify-content-center">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                     </div>
                   </td>
+                  <td class="text-center">PRO</td>
                   <td class="text-center">
                     <select class="form-select" aria-label="Default select example">
                       <option selected="">위탁 사용</option>
@@ -1839,7 +1827,7 @@
                     2024-05-06
                   </td>
                   <td class="text-center">
-                    <div class="hstack gap-2">
+                    <div class="hstack gap-2 justify-content-center">
                       <p>매월</p>
                       <select class="form-select" aria-label="Default select example">
                         <option selected="">10일</option>
@@ -1868,7 +1856,7 @@
 
 
 <!-- modal: 배송 정보 -->
-<div class="modal" tabindex="-1" id="modal-delivery-info">
+<div class="modal" tabindex="-1" id="modal-delivery-info" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
@@ -1876,6 +1864,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <p class="d-flex justify-content-end mb-2">수정요청 일시 : 2022-09-17</p>
         <table class="table table-bordered table-sticky" id="tableContestList">
           <colgroup>
             <col width="120px">
@@ -1958,7 +1947,7 @@
 </div>
 
 <!-- modal: 배송 정보 수정 승인 -->
-<div class="modal" tabindex="-1" id="modal-delivery-success" data-overlap="true">
+<div class="modal" tabindex="-1" id="modal-delivery-success" data-overlap="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -1980,7 +1969,7 @@
 </div>
 
 <!-- modal: 배송 정보 수정 거절 -->
-<div class="modal" tabindex="-1" id="modal-delivery-refusal" data-overlap="true">
+<div class="modal" tabindex="-1" id="modal-delivery-refusal" data-overlap="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -2001,12 +1990,12 @@
   </div>
 </div>
 
-<!-- modal: 등록 상품 리스트 -->
-<div class="modal" tabindex="-1" id="modal-contest-list">
+<!-- modal: 발주처리 -->
+<div class="modal" tabindex="-1" id="modal-contest-list" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
-        <p class="modal-title">등록 상품 리스트</p>
+        <p class="modal-title">발주처리</p>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -2155,7 +2144,7 @@
             </div>
             <div class="modal-footer gap-2">
               <button type="button" class="btn btn-green">Excel</button>
-              <button type="button" class="btn  btn-primary">저장</button>
+              <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
             </div>
           </div>
           <div class="tab-pane fade" id="modify-tab" role="tabpanel" aria-labelledby="modify">
@@ -2168,7 +2157,7 @@
 </div>
 
 <!-- modal: 발주 접수 -->
-<div class="modal" tabindex="-1" id="modal-ordering-receipt" data-overlap="true">
+<div class="modal" tabindex="-1" id="modal-ordering-receipt" data-overlap="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -2191,7 +2180,7 @@
 </div>
 
 <!-- modal: 발주 거절 -->
-<div class="modal" tabindex="-1" id="modal-ordering-refusal" data-overlap="true">
+<div class="modal" tabindex="-1" id="modal-ordering-refusal" data-overlap="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -2214,7 +2203,7 @@
 </div>
 
 <!-- modal: 발주 접수 취소 -->
-<div class="modal" tabindex="-1" id="modal-ordering-cancel" data-overlap="true">
+<div class="modal" tabindex="-1" id="modal-ordering-cancel" data-overlap="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -2237,7 +2226,7 @@
 </div>
 
 <!-- modal: ERP 입력 -->
-<div class="modal" tabindex="-1" id="modal-erp-input" data-overlap="true">
+<div class="modal" tabindex="-1" id="modal-erp-input" data-overlap="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -2273,7 +2262,7 @@
 </div>
 
 <!-- modal: 상품 준비 완료 -->
-<div class="modal" tabindex="-1" id="modal-product-success" data-overlap="true">
+<div class="modal" tabindex="-1" id="modal-product-success" data-overlap="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -2294,7 +2283,7 @@
 </div>
 
 <!-- modal: 할인 적용 -->
-<div class="modal" tabindex="-1" id="modal-discount" data-overlap="true">
+<div class="modal" tabindex="-1" id="modal-discount" data-overlap="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
@@ -2443,7 +2432,7 @@
 </div>
 
 <!-- modal: 서류 첨부 -->
-<div class="modal" tabindex="-1" id="modal-attach-documents" data-overlap="true">
+<div class="modal" tabindex="-1" id="modal-attach-documents" data-overlap="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
@@ -2509,7 +2498,7 @@
 </div>
 
 <!-- modal: 제품 발송 정보 -->
-<div class="modal" tabindex="-1" id="modal-delivery-info2">
+<div class="modal" tabindex="-1" id="modal-delivery-info2" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -2566,7 +2555,7 @@
 </div>
 
 <!-- modal: 제품 발송 정보 - 배송 완료일-->
-<div class="modal" tabindex="-1" id="modal-delivery-info3">
+<div class="modal" tabindex="-1" id="modal-delivery-info3" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -2601,7 +2590,7 @@
 </div>
 
 <!-- modal: 제품 발송 처리 -->
-<div class="modal" tabindex="-1" id="modal-delivery-process">
+<div class="modal" tabindex="-1" id="modal-delivery-process" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -2663,7 +2652,7 @@
 </div>
 
 <!-- modal: 제품 발송 처리 - 완료 일자-->
-<div class="modal" tabindex="-1" id="modal-delivery-process2">
+<div class="modal" tabindex="-1" id="modal-delivery-process2" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -2697,7 +2686,7 @@
 </div>
 
 <!-- modal: 발주 수정 승인 -->
-<div class="modal" tabindex="-1" id="modal-ordering-approval" data-overlap="true">
+<div class="modal" tabindex="-1" id="modal-ordering-approval" data-overlap="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -2720,7 +2709,7 @@
 
 
 <!-- modal: 발주 수정 거절 -->
-<div class="modal" tabindex="-1" id="modal-ordering-modify-refusal" data-overlap="true">
+<div class="modal" tabindex="-1" id="modal-ordering-modify-refusal" data-overlap="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -2743,7 +2732,7 @@
 
 
 <!-- modal: 입고관리- 입고처리 -->
-<div class="modal" tabindex="-1" id="modal-incoming-list">
+<div class="modal" tabindex="-1" id="modal-incoming-list" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
@@ -2799,9 +2788,9 @@
                 NL03P1 BK 6EA 발주하였으나, 배송된 제품은 5EA 임
                 발주하지 않은 Universal Lock Key 3 5 EA  포함되어 있음
               </textarea>
-              <div class="d-flex justify-content-end gap-2 mt-6">
-                <button type="button" class="btn btn-primary">업체 수정 확인</button>
-                <button type="button" class="btn btn-gray">입고 수정 거절</button>
+              <div class="d-flex justify-content-end gap-2 mt-4">
+                <button type="button" class="btn btn-sm btn-primary">업체 수정 확인</button>
+                <button type="button" class="btn btn-sm btn-gray">입고 수정 거절</button>
               </div>
             </div>
             <div class="scroll-layout">
@@ -2860,6 +2849,8 @@
               <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
             </div>
           </div>
+
+          <!--입고 수정 내역-->
           <div class="tab-pane fade" id="incoming-modify-tab" role="tabpanel" aria-labelledby="incoming-modify">
             <table class="table table-hover table-sticky table-bordered table-bordered2">
               <thead>
@@ -2894,46 +2885,30 @@
                 <table class="table table-hover mt-6">
                   <thead>
                     <th class="text-center">번호</th>
-                    <th class="text-center">수정 차수</th>
                     <th class="text-center">발주 구분</th>
-                    <th class="text-center">수정사유</th>
-                    <th class="text-center">구분</th>
-                    <th class="text-center">모델명</th>
-                    <th class="text-center">제품명</th>
-                    <th class="text-center">패턴 (컬러)</th>
-                    <th class="text-center">2차 패턴</th>
-                    <th class="text-center">수량</th>
-                    <th class="text-center">단가</th>
-                    <th class="text-center">공급가</th>
-                    <th class="text-center">국가</th>
-                    <th class="text-center">신규여부</th>
-                    <th class="text-center">유통사</th>
-                    <th class="text-center">최종고객사</th>
-                    <th class="text-center">지사/ 부서</th>
-                    <th class="text-center">시리얼</th>
-                    <th class="text-center">비고</th>
+                    <th class="text-center">발주번호</th>
+                    <th class="text-center">입고 진행 상태</th>
+                    <th class="text-center">수정차수</th>
+                    <th class="text-center">수정 현황</th>
+                    <th class="text-center">입고 수정요청 내역</th>
+                    <th class="text-center">입고 수정 승인(거절)내역</th>
+                    <th class="text-center">승인(거절)일시</th>
+                    <th class="text-center">입고번호</th>
+                    <th class="text-center">승인관리자</th>
                   </thead>
                   <tbody>
                     @@for(i=1; i < 11; i++){ <tr>
                       <td class="text-center">`+ i +`</td>
-                      <td class="text-center"></td>
                       <td class="text-center">일반</td>
-                      <td class="text-center"></td>
-                      <td class="text-center">PRO</td>
-                      <td class="text-center">CSK-UL10</td>
-                      <td class="text-center">USB Port Lock</td>
-                      <td class="text-center">AB</td>
-                      <td class="text-center"></td>
-                      <td class="text-center">100</td>
-                      <td class="text-center">1,327</td>
-                      <td class="text-center">132,700</td>
-                      <td class="text-center">NL</td>
-                      <td class="text-center">NEW</td>
-                      <td class="text-center">HART4TECH</td>
-                      <td class="text-center">NN Group</td>
-                      <td class="text-center"></td>
-                      <td class="text-center"></td>
-                      <td class="text-center"></td>
+                      <td class="text-center"><a href="javascript:void(0)">2024-05-11</a></td>
+                      <td class="text-center">수정입고완료</td>
+                      <td class="text-center">수정거절</td>
+                      <td class="text-center">4</td>
+                      <td class="text-center"><a href="javascript:void(0)">MR-2023/10/19-01</a></td>
+                      <td class="text-center"><a href="javascript:void(0)">MD-2023/10/19-01</a></td>
+                      <td class="text-center">23-10-19 / 12:12:10</td>
+                      <td class="text-center"><a href="javascript:void(0)">R-SLS-230427-2</a></td>
+                      <td class="text-center">장승근</td>
                       </tr>
                       }
                   </tbody>
@@ -2952,7 +2927,7 @@
 
 
 <!-- modal: 입고관리- 입고 수정 요청 내역 -->
-<div class="modal" tabindex="-1" id="modal-incoming-modify">
+<div class="modal" tabindex="-1" id="modal-incoming-modify" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
@@ -3030,7 +3005,7 @@
 
 
 <!-- modal: 위탁관리- 위탁정산내역 -->
-<div class="modal" tabindex="-1" id="modal-consignment-list">
+<div class="modal" tabindex="-1" id="modal-consignment-list" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
@@ -3056,9 +3031,9 @@
         <div>
           <p class="table-title mt-6"><span class="text-danger">*</span>요청 사항</p>
           <textarea name="" id="" class="form-control"></textarea>
-          <div class="d-flex justify-content-end gap-2 mt-6">
-            <button type="button" class="btn btn-primary">정산 승인</button>
-            <button type="button" class="btn btn-gray">정산 거절</button>
+          <div class="d-flex justify-content-end gap-2 mt-4">
+            <button type="button" class="btn btn-primary btn-sm">정산 승인</button>
+            <button type="button" class="btn btn-gray btn-sm">정산 거절</button>
           </div>
         </div>
         <div class="scroll-layout">
@@ -3142,7 +3117,7 @@
 </div>
 
 <!-- modal: 위탁관리- 최종 정산내역 -->
-<div class="modal" tabindex="-1" id="modal-consignment-total">
+<div class="modal" tabindex="-1" id="modal-consignment-total" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
@@ -3256,7 +3231,7 @@
 
 
 <!-- modal: 위탁관리 정산 승인 -->
-<div class="modal" tabindex="-1" id="modal-consignment-approval" data-overlap="true">
+<div class="modal" tabindex="-1" id="modal-consignment-approval" data-overlap="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -3279,7 +3254,7 @@
 
 
 <!-- modal: 위탁관리 정산 거절 -->
-<div class="modal" tabindex="-1" id="modal-consignment-modify-refusal" data-overlap="true">
+<div class="modal" tabindex="-1" id="modal-consignment-modify-refusal" data-overlap="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -3305,7 +3280,7 @@
 
 
 <!-- modal: 위탁관리 - 위탁재고조회 -->
-<div class="modal" tabindex="-1" id="modal-consignment-management">
+<div class="modal" tabindex="-1" id="modal-consignment-management" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
@@ -3608,13 +3583,13 @@
                 </div>
               </div>
             </div>
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center mb-4">
               <p>USB Port Lock AB</p>
               <p>2023/05/07 ~ 2023/11/07​</p>
             </div>
             <div class="scroll-layout">
               <div class="scroll-content" style="max-height: 810px;overflow-y: auto;">
-                <table class="table mt-6">
+                <table class="table">
                   <thead>
                     <th class="text-center">구분</th>
                     <th class="text-center text-danger">연결전표</th>
@@ -3814,7 +3789,7 @@
             </div>
             <div class="d-flex justify-content-end mt-6 gap-2">
               <button type="button" class="btn btn-primary">선택승인</button>
-              <button type="button" class="btn btn-orange">선택거절</button>
+              <button type="button" class="btn btn-outline-danger">선택거절</button>
               <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
             </div>
           </div>
@@ -3826,7 +3801,7 @@
 
 
 <!-- modal: 위탁관리 - 위탁 재고 조정 - 승인 및 거절창 -->
-<div class="modal" tabindex="-1" id="modal-consignment-modify">
+<div class="modal" tabindex="-1" id="modal-consignment-modify" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
     <div class="modal-content">
       <div class="modal-header">
@@ -3886,11 +3861,9 @@
             </table>
           </div>
         </div>
-        <div>
-          <textarea name="" id="" class="form-control">
-            요청한 제품은 재고조정이 불가한 제품입니다. 
-          </textarea>
-        </div>
+        <textarea name="" id="" class="form-control mt-6">
+          요청한 제품은 재고조정이 불가한 제품입니다. 
+        </textarea>
       </div>
       <div class="modal-footer gap-2">
         <button type="button" class="btn btn-primary">조정 승인</button>
@@ -3902,7 +3875,7 @@
 </div>
 
 <!-- modal: 정산관리 - 결재 증빙 파일 보기 -->
-<div class="modal" tabindex="-1" id="modal-settlement-file">
+<div class="modal" tabindex="-1" id="modal-settlement-file" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
@@ -3926,7 +3899,7 @@
             </tr>
             <tr>
               <th class="text-center">결재금액</th>
-              <td colspan="3" class="bg-yellow50">2023/12/30</td>
+              <td colspan="3" class="bg-yellow50">8,970,000</td>
             </tr>
           </tbody>
         </table>
@@ -3963,7 +3936,7 @@
 </div>
 
 <!-- modal: 정산관리 - 결재 확인 -->
-<div class="modal" tabindex="-1" id="modal-settlement-confirm">
+<div class="modal" tabindex="-1" id="modal-settlement-confirm" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -4018,7 +3991,7 @@
 </div>
 
 <!-- modal: 정산관리 - 이력조회 -->
-<div class="modal" tabindex="-1" id="modal-settlement-history">
+<div class="modal" tabindex="-1" id="modal-settlement-history" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -4055,7 +4028,7 @@
 </div>
 
 <!-- modal: 게시판관리 - 업체검색창-->
-<div class="modal" tabindex="-1" id="modal-company-search">
+<div class="modal" tabindex="-1" id="modal-company-search" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">
@@ -4136,7 +4109,7 @@
 </div>
 
 <!-- modal: 게시판관리 - 요청게시판- 패턴 및 제품 추가 요청-->
-<div class="modal" tabindex="-1" id="modal-company-search">
+<div class="modal" tabindex="-1" id="modal-company-search" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
     <div class="modal-content">
       <div class="modal-header">

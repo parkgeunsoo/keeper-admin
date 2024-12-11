@@ -13,8 +13,6 @@
       <div id="container">
         <div class="page-top">
           <h1 class="page-title d-none d-lg-block">마케팅 소식</h1>
-          <button type="button" class="btn btn-primary" onclick="document.location.href='board-form.html'">관리자
-            글쓰기</button>
         </div>
         <div class="contents">
           <ul class="nav nav-tabs mb-10">
@@ -51,10 +49,13 @@
               <button type="button" class="btn btn-dark">검색</button>
             </div>
           </div>
-
+          <div class="hstack justify-content-end mb-4">
+            <button type="button" class="btn btn-primary" onclick="document.location.href='product-form.html'">관리자
+              글쓰기</button>
+          </div>
           <div class="scroll-layout">
             <div class="scroll-content" style="max-height: 582px;overflow-y: auto;">
-              <table class="table table-hover table-sticky table-bordered table-bordered2">
+              <table class="table table-hover">
                 <thead>
                   <tr>
                     <th class="text-center">번호</th>

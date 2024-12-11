@@ -33,17 +33,6 @@
                     </select>
                   </td>
                 </tr>
-                <tr>
-                  <th class="text-center">상품그룹 선택</th>
-                  <td>
-                    <select class="form-select" aria-label="Default select example" style="width: 200px;">
-                      <option selected="">USB Security</option>
-                      <option value=" 1">USB Security</option>
-                      <option value="2">USB Security</option>
-                      <option value="3">USB Security</option>
-                    </select>
-                  </td>
-                </tr>
               </tbody>
             </table>
             <div class="d-flex mt-2 align-items-center justify-content-end">
@@ -51,6 +40,10 @@
                 <button type="button" class="btn btn-gray">상품 분류 검색</button>
               </div>
             </div>
+          </div>
+          <div class="hstack gap-2 justify-content-end mb-4">
+            <button type="button" class="btn btn-primary">저장</button>
+            <button type="button" class="btn btn-gray">가격표 다운로드</button>
           </div>
           <div class="scroll-layout">
             <div class="scroll-content">
@@ -104,10 +97,7 @@
               </table>
             </div>
           </div>
-          <div class="hstack gap-2 justify-content-end mt-4">
-            <button type="button" class="btn btn-primary">저장</button>
-            <button type="button" class="btn btn-gray">가격표 다운로드</button>
-          </div>
+
           @@include('@@webRoot/html/_components/_pagination.html')
           <!-- //container -->
         </div>
