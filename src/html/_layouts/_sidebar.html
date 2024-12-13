@@ -8,92 +8,71 @@
     <nav class="sidebar-nav" id="sidevarNav">
       <ul>
         <li class="sidebar-item">
-          <a href="@@webRoot/html/pages/keeper/member/member-management.html"
-            class="sidebar-link @@if (context.dep1 === '회원관리') {active}"
-            aria-expanded="@@if (context.dep1 === '회원관리') {true}">
+          <a href="@@webRoot/html/pages/member/member-management.html" class="sidebar-link @@if (context.dep1 === '회원관리') {active}" aria-expanded="@@if (context.dep1 === '회원관리') {true}">
             <i class="icon-nav-01"></i><span>회원관리</span>
           </a>
         </li>
         <li class="sidebar-item">
-          <a href="@@webRoot/html/pages/keeper/partner/partner.html"
-            class="sidebar-link @@if (context.dep1 === '파트너사 설정 관리') {active}"
-            aria-expanded="@@if (context.dep1 === '파트너사 설정 관리') {true}">
+          <a href="@@webRoot/html/pages/partner/partner.html" class="sidebar-link @@if (context.dep1 === '파트너사 설정 관리') {active}" aria-expanded="@@if (context.dep1 === '파트너사 설정 관리') {true}">
             <i class="icon-nav-02"></i><span>파트너사 설정 관리</span>
           </a>
         </li>
         <li class="sidebar-item">
-          <a href="#" data-bs-target="#gnb-product" data-bs-toggle="collapse"
-            class="sidebar-link @@if (context.dep1 === '상품관리') {active}"
-            aria-expanded="@@if (context.dep1 === '상품관리') {true}"> <!-- 펼쳐짐: aria-expanded="true" / 현재메뉴: .active -->
+          <a href="#" data-bs-target="#gnb-product" data-bs-toggle="collapse" class="sidebar-link @@if (context.dep1 === '상품관리') {active}" aria-expanded="@@if (context.dep1 === '상품관리') {true}"> <!-- 펼쳐짐: aria-expanded="true" / 현재메뉴: .active -->
             <i class="icon-nav-03"></i><span>상품관리</span>
           </a>
-          <div id="gnb-product" data-bs-parent="#sidevarNav"
-            class="accordion-collapse collapse @@if (context.dep1 === '상품관리') {show}"> <!-- 펼쳐짐: .show -->
+          <div id="gnb-product" data-bs-parent="#sidevarNav" class="accordion-collapse collapse @@if (context.dep1 === '상품관리') {show}"> <!-- 펼쳐짐: .show -->
             <div class="depth2-heading">상품관리</div>
             <ul class="depth2">
               <li class="sidebar-item">
-                <a href="@@webRoot/html/pages/keeper/product/product-registration.html"
-                  class="sidebar-link @@if (context.dep2 === '상품 등록 및 수정') {active}">상품 등록 및 수정</a>
+                <a href="@@webRoot/html/pages/product/product-registration.html" class="sidebar-link @@if (context.dep2 === '상품 등록 및 수정') {active}">상품 등록 및 수정</a>
                 <!-- 현재메뉴: .active -->
               </li>
               <li class="sidebar-item">
-                <a href="@@webRoot/html/pages/keeper/product/product-pattern.html"
-                  class="sidebar-link @@if (context.dep2 === '상품 패턴 등록') {active}">상품 패턴 등록</a>
+                <a href="@@webRoot/html/pages/product/product-pattern.html" class="sidebar-link @@if (context.dep2 === '상품 패턴 등록') {active}">상품 패턴 등록</a>
               </li>
               <li class="sidebar-item">
-                <a href="@@webRoot/html/pages/keeper/product/product-group.html"
-                  class="sidebar-link @@if (context.dep2 === '상품그룹생성 및 수정') {active}">상품그룹생성 및 수정</a>
+                <a href="@@webRoot/html/pages/product/product-group.html" class="sidebar-link @@if (context.dep2 === '상품그룹생성 및 수정') {active}">상품그룹생성 및 수정</a>
               </li>
               <li class="sidebar-item">
-                <a href="@@webRoot/html/pages/keeper/product/product-price-list.html"
-                  class="sidebar-link @@if (context.dep2 === '상품 가격표 생성 입력') {active}">상품 가격표 생성 입력</a>
+                <a href="@@webRoot/html/pages/product/product-price-list.html" class="sidebar-link @@if (context.dep2 === '상품 가격표 생성 입력') {active}">상품 가격표 생성 입력</a>
               </li>
               <li class="sidebar-item">
-                <a href="@@webRoot/html/pages/keeper/product/product-check.html"
-                  class="sidebar-link @@if (context.dep2 === '상품 가격 조회') {active}">상품 가격 조회</a>
+                <a href="@@webRoot/html/pages/product/product-check.html" class="sidebar-link @@if (context.dep2 === '상품 가격 조회') {active}">상품 가격 조회</a>
               </li>
             </ul>
           </div>
         </li>
         <li class="sidebar-item">
-          <a href="@@webRoot/html/pages/keeper/ordering/ordering.html"
-            class="sidebar-link @@if (context.dep1 === '발주관리​') {active}"
-            aria-expanded="@@if (context.dep1 === '발주관리​') {true}">
+          <a href="@@webRoot/html/pages/ordering/ordering.html" class="sidebar-link @@if (context.dep1 === '발주관리​') {active}" aria-expanded="@@if (context.dep1 === '발주관리​') {true}">
             <i class="icon-nav-04"></i><span>발주관리​</span>
           </a>
         </li>
         <li class="sidebar-item">
-          <a href="" class="sidebar-link @@if (context.dep1 === '입고관리​') {active}"
-            aria-expanded="@@if (context.dep1 === '입고관리​') {true}">
+          <a href="@@webRoot/html/pages/incoming/incoming.html" class="sidebar-link @@if (context.dep1 === '입고관리​') {active}" aria-expanded="@@if (context.dep1 === '입고관리​') {true}">
             <i class="icon-nav-05"></i><span>입고관리​</span>
           </a>
         </li>
         <li class="sidebar-item">
-          <a href="" class="sidebar-link @@if (context.dep1 === '위탁관리') {active}"
-            aria-expanded="@@if (context.dep1 === '위탁관리') {true}">
+          <a href="@@webRoot/html/pages/consignment/consignment.html" class="sidebar-link @@if (context.dep1 === '위탁관리') {active}" aria-expanded="@@if (context.dep1 === '위탁관리') {true}">
             <i class="icon-nav-06"></i><span>위탁관리</span>
           </a>
         </li>
         <li class="sidebar-item">
-          <a href="" class="sidebar-link @@if (context.dep1 === '​정산관리') {active}"
-            aria-expanded="@@if (context.dep1 === '​정산관리') {true}">
+          <a href="@@webRoot/html/pages/settlement/settlement.html" class="sidebar-link @@if (context.dep1 === '​정산관리') {active}" aria-expanded="@@if (context.dep1 === '​정산관리') {true}">
             <i class="icon-nav-07"></i><span>​정산관리</span>
           </a>
         </li>
         <li class="sidebar-item">
-          <a href="" class="sidebar-link @@if (context.dep1 === '판매조회') {active}"
-            aria-expanded="@@if (context.dep1 === '​판매조회') {true}">
+          <a href="" class="sidebar-link @@if (context.dep1 === '판매조회') {active}" aria-expanded="@@if (context.dep1 === '​판매조회') {true}">
             <i class="icon-nav-08"></i><span>판매조회</span>
           </a>
         </li>
         <li class="sidebar-item">
-          <a href="#" data-bs-target="#gnb-notice-board" data-bs-toggle="collapse"
-            class="sidebar-link @@if (context.dep1 === '게시판 관리') {active}"
-            aria-expanded="@@if (context.dep1 === '게시판 관리') {true}">
+          <a href="#" data-bs-target="#gnb-notice-board" data-bs-toggle="collapse" class="sidebar-link @@if (context.dep1 === '게시판 관리') {active}" aria-expanded="@@if (context.dep1 === '게시판 관리') {true}">
             <i class="icon-nav-09"></i><span>게시판 관리</span>
           </a>
-          <div id="gnb-notice-board" data-bs-parent="#sidevarNav"
-            class="accordion-collapse collapse @@if (context.dep1 === '게시판 관리') {show}"> <!-- 펼쳐짐: .show -->
+          <div id="gnb-notice-board" data-bs-parent="#sidevarNav" class="accordion-collapse collapse @@if (context.dep1 === '게시판 관리') {show}"> <!-- 펼쳐짐: .show -->
             <div class="depth2-heading">게시판 관리</div>
             <ul class="depth2">
               <li class="sidebar-item">
@@ -112,13 +91,10 @@
           </div>
         </li>
         <li class="sidebar-item">
-          <a href="#" data-bs-target="#gnb-etc" data-bs-toggle="collapse"
-            class="sidebar-link @@if (context.dep1 === '기타 조회 및 수정') {active}"
-            aria-expanded="@@if (context.dep1 === '기타 조회 및 수정') {true}">
+          <a href="#" data-bs-target="#gnb-etc" data-bs-toggle="collapse" class="sidebar-link @@if (context.dep1 === '기타 조회 및 수정') {active}" aria-expanded="@@if (context.dep1 === '기타 조회 및 수정') {true}">
             <i class="icon-nav-10"></i><span>기타 조회 및 수정</span>
           </a>
-          <div id="gnb-etc" data-bs-parent="#sidevarNav"
-            class="accordion-collapse collapse @@if (context.dep1 === '기타 조회 및 수정') {show}"> <!-- 펼쳐짐: .show -->
+          <div id="gnb-etc" data-bs-parent="#sidevarNav" class="accordion-collapse collapse @@if (context.dep1 === '기타 조회 및 수정') {show}"> <!-- 펼쳐짐: .show -->
             <div class="depth2-heading">기타 조회 및 수정</div>
             <ul class="depth2">
               <li class="sidebar-item">
@@ -131,13 +107,10 @@
           </div>
         </li>
         <li class="sidebar-item">
-          <a href="#" data-bs-target="#gnb-system" data-bs-toggle="collapse"
-            class="sidebar-link @@if (context.dep1 === '시스템 설정') {active}"
-            aria-expanded="@@if (context.dep1 === '기타 조회 및 수정') {true}">
+          <a href="#" data-bs-target="#gnb-system" data-bs-toggle="collapse" class="sidebar-link @@if (context.dep1 === '시스템 설정') {active}" aria-expanded="@@if (context.dep1 === '기타 조회 및 수정') {true}">
             <i class="icon-nav-11"></i><span>시스템 설정</span>
           </a>
-          <div id="gnb-system" data-bs-parent="#sidevarNav"
-            class="accordion-collapse collapse @@if (context.dep1 === '시스템 설정') {show}"> <!-- 펼쳐짐: .show -->
+          <div id="gnb-system" data-bs-parent="#sidevarNav" class="accordion-collapse collapse @@if (context.dep1 === '시스템 설정') {show}"> <!-- 펼쳐짐: .show -->
             <div class="depth2-heading">시스템 설정</div>
             <ul class="depth2">
               <li class="sidebar-item">
@@ -150,13 +123,10 @@
           </div>
         </li>
         <li class="sidebar-item">
-          <a href="#" data-bs-target="#gnb-myinfo" data-bs-toggle="collapse"
-            class="sidebar-link @@if (context.dep1 === '​내 정보 보기') {active}"
-            aria-expanded="@@if (context.dep1 === '내 정보 보기') {true}">
+          <a href="#" data-bs-target="#gnb-myinfo" data-bs-toggle="collapse" class="sidebar-link @@if (context.dep1 === '​내 정보 보기') {active}" aria-expanded="@@if (context.dep1 === '내 정보 보기') {true}">
             <i class="icon-nav-12"></i><span>내 정보 보기</span>
           </a>
-          <div id="gnb-myinfo" data-bs-parent="#sidevarNav"
-            class="accordion-collapse collapse @@if (context.dep1 === '내 정보 보기') {show}"> <!-- 펼쳐짐: .show -->
+          <div id="gnb-myinfo" data-bs-parent="#sidevarNav" class="accordion-collapse collapse @@if (context.dep1 === '내 정보 보기') {show}"> <!-- 펼쳐짐: .show -->
             <div class="depth2-heading">내 정보 보기</div>
             <ul class="depth2">
               <li class="sidebar-item">
@@ -169,9 +139,7 @@
           </div>
         </li>
         <li class="sidebar-item">
-          <a href="@@webRoot/html/pages/keeper/admin-id/id-management.html"
-            class="sidebar-link @@if (context.dep1 === '관리자 ID 관리') {active}"
-            aria-expanded="@@if (context.dep1 === '관리자 ID 관리') {true}">
+          <a href="@@webRoot/html/pages/admin-id/id-management.html" class="sidebar-link @@if (context.dep1 === '관리자 ID 관리') {active}" aria-expanded="@@if (context.dep1 === '관리자 ID 관리') {true}">
             <i class="icon-nav-13"></i><span>관리자 ID 관리</span>
           </a>
         </li>
