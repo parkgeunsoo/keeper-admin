@@ -27,30 +27,31 @@
                 <tr>
                   <th class="text-center">기준일자​</th>
                   <td colspan="3">
-                    <div class="row g-2 align-items-center">
-                      <div class="col-auto">
-                        <input type="radio" class="btn-check" id="type1" autocomplete="off" name="dayType">
-                        <label class="btn btn-outline-secondary btn-sm" for="type1">1개월</label>
-                        <input type="radio" class="btn-check" id="type2" autocomplete="off" name="dayType">
-                        <label class="btn btn-outline-secondary btn-sm" for="type2">6개월</label>
-                        <input type="radio" class="btn-check" id="type3" autocomplete="off" name="dayType">
-                        <label class="btn btn-outline-secondary btn-sm" for="type3">1년</label>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="row g-2 align-items-center">
+                        <div class="col-auto">
+                          <input type="radio" class="btn-check" id="type1" autocomplete="off" name="dayType">
+                          <label class="btn btn-outline-secondary btn-sm" for="type1">1개월</label>
+                          <input type="radio" class="btn-check" id="type2" autocomplete="off" name="dayType">
+                          <label class="btn btn-outline-secondary btn-sm" for="type2">6개월</label>
+                          <input type="radio" class="btn-check" id="type3" autocomplete="off" name="dayType">
+                          <label class="btn btn-outline-secondary btn-sm" for="type3">1년</label>
+                        </div>
+                        <div class="col-auto">
+                          <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                        </div>
+                        <div class="col-auto">~</div>
+                        <div class="col-auto">
+                          <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                        </div>
                       </div>
                       <div class="col-auto">
-                        <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
-                      </div>
-                      <div class="col-auto">~</div>
-                      <div class="col-auto">
-                        <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
-                      </div>
-                      <div class="col-auto">
-                        <button type="button" class="btn btn-gray">검색조건</button>
+                        <button type="button" class="btn btn-gray" id="btn-srch-con">검색조건</button>
                       </div>
                     </div>
-
                   </td>
                 </tr>
-                <tr>
+                <tr class="hide-srch">
                   <th class="text-center">발주 구분​</th>
                   <td>
                     <div class="py-2">
@@ -86,7 +87,7 @@
                     </div>
                   </td>
                 </tr>
-                <tr>
+                <tr class="hide-srch">
                   <th class="text-center">미수 구분​</th>
                   <td colspan="3">
                     <div class="py-2">
@@ -164,6 +165,14 @@
         </div>
       </div>
       <!-- //main -->
+      <script>
+        $(document).ready(function () {
+          $('.hide-srch').hide();
+          $('#btn-srch-con').click(function () {
+            $('.hide-srch').toggle(); // 요소 보이기/숨기기 전환
+          });
+        });
+      </script>
     </main>
     @@include('@@webRoot/html/_layouts/_footer.html')
   </div>
