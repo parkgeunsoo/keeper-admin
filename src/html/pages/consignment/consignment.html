@@ -11,9 +11,6 @@
     <main id="main">
       @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "위탁관리"})
       <div id="container">
-        <div class="page-top">
-          <h1 class="page-title d-none d-lg-block">위탁관리</h1>
-        </div>
         <div class="contents">
           <div class="filter-wrap">
             <table class="table table-bordered table-sticky">
@@ -44,6 +41,7 @@
               </tbody>
             </table>
           </div>
+
           <div style="max-height: 287px; overflow-y: auto" class="mb-4">
             <table class="table table-hover table-sticky table-bordered table-bordered2">
               <thead>
@@ -105,11 +103,15 @@
             </table>
             <div class="d-flex mt-2 align-items-center justify-content-end">
               <div class="hstack">
-                <button type="button" class="btn btn-gray">검색</button>
+                <button type="button" class="btn btn-dark">검색</button>
               </div>
             </div>
           </div>
-          <p class="d-flex justify-content-end mb-4">2023-11-24 ~ 2024-03-24</p>
+
+          <div class="d-flex align-items-center justify-content-between mb-4 mt-10">
+            @@include('@@webRoot/html/_components/_pagination.html')
+            <p class="d-flex justify-content-end">2023-11-24 ~ 2024-03-24</p>
+          </div>
           <div class="scroll-layout">
             <div class="scroll-content" style="max-height: 581px; overflow-y: auto">
               <table class="table table-hover">
@@ -143,7 +145,6 @@
               </table>
             </div>
           </div>
-          @@include('@@webRoot/html/_components/_pagination.html')
           <!-- //container -->
         </div>
       </div>

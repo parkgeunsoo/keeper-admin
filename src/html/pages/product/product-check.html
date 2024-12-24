@@ -11,9 +11,6 @@
     <main id="main">
       @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "상품관리", "dep2" : "상품 가격 조회"})
       <div id="container">
-        <div class="page-top">
-          <h1 class="page-title d-none d-lg-block">상품 가격 조회</h1>
-        </div>
         <div class="contents">
           <div class="filter-wrap">
             <table class="table table-bordered table-sticky">
@@ -78,12 +75,19 @@
             </table>
             <div class="d-flex mt-2 align-items-center justify-content-end">
               <div class="hstack gap-2">
-                <button type="button" class="btn btn-gray">검색</button>
+                <button type="button" class="btn btn-dark">검색</button>
               </div>
             </div>
           </div>
+          <div class="d-flex align-items-center justify-content-between mb-4 mt-10">
+            @@include('@@webRoot/html/_components/_pagination.html')
+            <div class="hstack gap-2 justify-content-end">
+              <button type="button" class="btn btn-primary">저장</button>
+              <button type="button" class="btn btn-gray">가격표 다운로드</button>
+            </div>
+          </div>
           <div class="scroll-layout">
-            <div class="scroll-content">
+            <div class="scroll-content" style="max-height: 600px;">
               <table class="table table-hover table-sticky table-bordered table-bordered2">
                 <thead>
                   <tr>
@@ -136,11 +140,7 @@
               </table>
             </div>
           </div>
-          <div class="hstack gap-2 justify-content-end mt-4">
-            <button type="button" class="btn btn-primary">저장</button>
-            <button type="button" class="btn btn-gray">가격표 다운로드</button>
-          </div>
-          @@include('@@webRoot/html/_components/_pagination.html')
+
           <!-- //container -->
         </div>
       </div>

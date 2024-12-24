@@ -11,9 +11,6 @@
     <main id="main">
       @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "기타 조회 및 수정", "dep2" : "최종고객사 조회" })
       <div id="container">
-        <div class="page-top">
-          <h1 class="page-title d-none d-lg-block">기타 조회 및 수정</h1>
-        </div>
         <div class="contents">
           <div class="filter-wrap">
             <table class="table table-bordered table-sticky">
@@ -45,18 +42,21 @@
             </table>
             <div class="d-flex mt-2 align-items-center justify-content-end">
               <div class="hstack gap-2">
-                <button type="button" class="btn btn-gray">검색</button>
+                <button type="button" class="btn btn-dark">검색</button>
               </div>
             </div>
           </div>
-          <div class="hstack justify-content-end gap-2 mb-4">
-            <button type="button" class="btn btn-primary">신규</button>
-            <button type="button" class="btn btn-gray">판매현황 조회</button>
-            <button type="button" class="btn btn-green">Excel</button>
-            <button type="button" class="btn btn-outline-primary">일괄 업로드</button>
+          <div class="d-flex align-items-center justify-content-between mb-4 mt-10">
+            @@include('@@webRoot/html/_components/_pagination.html')
+            <div class="hstack justify-content-end gap-2">
+              <button type="button" class="btn btn-primary">신규</button>
+              <button type="button" class="btn btn-gray">판매현황 조회</button>
+              <button type="button" class="btn btn-green">Excel</button>
+              <button type="button" class="btn btn-outline-primary">일괄 업로드</button>
+            </div>
           </div>
           <div class="scroll-layout">
-            <div class="scroll-content">
+            <div class="scroll-content" style="max-height: 582px;overflow-y: auto;">
               <table class="table table-hover">
                 <thead>
                   <th class="text-center">번호</th>
@@ -80,8 +80,6 @@
               </table>
             </div>
           </div>
-
-          @@include('@@webRoot/html/_components/_pagination.html')
           <!-- //container -->
         </div>
       </div>

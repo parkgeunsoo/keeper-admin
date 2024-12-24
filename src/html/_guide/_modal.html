@@ -957,6 +957,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <div class="d-flex align-items-center justify-content-between mb-4 mt-10">
+          @@include('../_components/_pagination.html')
+        </div>
         <table class="table table-hover" id="tableContestList">
           <thead>
             <th class="text-center">번호</th>
@@ -995,7 +998,6 @@
               }
           </tbody>
         </table>
-        @@include('../_components/_pagination.html')
       </div>
       <div class="modal-footer gap-2">
         <button type="button" class="btn btn-green">Excel</button>
@@ -1089,7 +1091,7 @@
           </table>
           <div class="d-flex mt-2 align-items-center justify-content-end">
             <div class="hstack gap-2">
-              <button type="button" class="btn btn-gray">검색</button>
+              <button type="button" class="btn btn-dark">검색</button>
             </div>
           </div>
         </div>
@@ -1097,8 +1099,11 @@
           <button type="button" class="btn btn-primary">패턴 정보 일괄 업로드</button>
           <button type="button" class="btn btn-orange">개별 패턴 추가</button>
         </div>
+        <div class="d-flex align-items-center justify-content-between mb-4 mt-10">
+          @@include('../_components/_pagination.html')
+        </div>
         <div style="overflow-y:auto;max-height:707px;">
-          <table class="table table-hover mt-6">
+          <table class="table table-hover">
             <thead>
               <th class="text-center">번호</th>
               <th class="text-center"></th>
@@ -1127,7 +1132,6 @@
             </tbody>
           </table>
         </div>
-        @@include('../_components/_pagination.html')
       </div>
       <div class="modal-footer gap-2">
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">저장</button>
@@ -1668,7 +1672,10 @@
                     </tbody>
                   </table>
                 </div>
-                <div style="max-height: 383px;overflow-y: auto;" class="mt-6">
+                <div class="d-flex align-items-center justify-content-between mb-4 mt-10">
+                  @@include('../_components/_pagination.html')
+                </div>
+                <div style="max-height: 383px;overflow-y: auto;">
                   <table class="table table-hover" id="product-table">
                     <thead>
                       <th class="text-center">
@@ -1708,7 +1715,6 @@
                         }
                     </tbody>
                   </table>
-                  @@include('../_components/_pagination.html')
                   <script>
                     var $listCheckAll = $("#product-table .check-all");
                     var $listCheckItems = $("#product-table tbody .form-check-input");
@@ -3411,7 +3417,7 @@
               <div class="d-flex mt-2 align-items-center justify-content-end">
                 <div class="hstack gap-2">
                   <p class="mr-2">2023-11-24 ~ 2024-03-24</p>
-                  <button type="button" class="btn btn-gray">검색</button>
+                  <button type="button" class="btn btn-dark">검색</button>
                 </div>
               </div>
             </div>
@@ -3543,7 +3549,7 @@
               </table>
               <div class="d-flex mt-2 align-items-center justify-content-end">
                 <div class="hstack">
-                  <button type="button" class="btn btn-gray">검색</button>
+                  <button type="button" class="btn btn-dark">검색</button>
                 </div>
               </div>
             </div>
@@ -3675,7 +3681,7 @@
               </table>
               <div class="d-flex mt-2 align-items-center justify-content-end">
                 <div class="hstack">
-                  <button type="button" class="btn btn-gray">검색</button>
+                  <button type="button" class="btn btn-dark">검색</button>
                 </div>
               </div>
             </div>
@@ -3855,7 +3861,7 @@
               </table>
               <div class="d-flex mt-2 align-items-center justify-content-end">
                 <div class="hstack">
-                  <button type="button" class="btn btn-gray">검색</button>
+                  <button type="button" class="btn btn-dark">검색</button>
                 </div>
               </div>
             </div>
@@ -3939,8 +3945,6 @@
       $(".show-select-box .list ul").toggleClass("short");
     });
   });
-
-
 </script>
 
 <!-- modal: 위탁관리 - 위탁 재고 조정 - 승인 및 거절창 -->
@@ -4196,7 +4200,7 @@
           </table>
           <div class="d-flex mt-2 align-items-center justify-content-end">
             <div class="hstack gap-2">
-              <button type="button" class="btn btn-gray">검색</button>
+              <button type="button" class="btn btn-dark">검색</button>
               <button type="button" class="btn btn-outline-gray px-2" aria-label="초기화">
                 <i class="icon-reset"></i>
               </button>

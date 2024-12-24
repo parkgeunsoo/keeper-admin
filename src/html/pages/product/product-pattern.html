@@ -11,9 +11,7 @@
     <main id="main">
       @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "상품관리", "dep2" : "상품 패턴 등록"})
       <div id="container">
-        <div class="page-top">
-          <h1 class="page-title d-none d-lg-block">상품 패턴 등록</h1>
-        </div>
+
         <div class="contents">
           <div class="filter-wrap">
             <table class="table table-bordered table-sticky">
@@ -47,8 +45,11 @@
               </tbody>
             </table>
           </div>
+          <div class="d-flex align-items-center justify-content-between mb-4 mt-10">
+            @@include('@@webRoot/html/_components/_pagination.html')
+          </div>
           <div class="scroll-layout">
-            <div class="scroll-content">
+            <div class="scroll-content" style="max-height: 500px;">
               <table class="table table-hover table-sticky">
                 <thead>
                   <th class="text-center">번호</th>
@@ -88,7 +89,6 @@
               </table>
             </div>
           </div>
-          @@include('@@webRoot/html/_components/_pagination.html')
           <!-- //container -->
         </div>
       </div>

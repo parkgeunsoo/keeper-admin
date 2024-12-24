@@ -11,9 +11,6 @@
     <main id="main">
       @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "정산관리"})
       <div id="container">
-        <div class="page-top">
-          <h1 class="page-title d-none d-lg-block">정산관리</h1>
-        </div>
         <div class="contents">
           <div class="filter-wrap">
             <table class="table table-bordered table-sticky">
@@ -110,12 +107,16 @@
             </table>
             <div class="d-flex mt-2 align-items-center justify-content-end">
               <div class="hstack gap-2">
-                <button type="button" class="btn btn-gray">검색</button>
+                <button type="button" class="btn btn-dark">검색</button>
               </div>
             </div>
           </div>
-          <div class="hstack justify-content-end mb-4">
-            <button type="button" class="btn btn-green">Excel</button>
+
+          <div class="d-flex align-items-center justify-content-between mb-4 mt-10">
+            @@include('@@webRoot/html/_components/_pagination.html')
+            <div class="hstack justify-content-end ">
+              <button type="button" class="btn btn-green">Excel</button>
+            </div>
           </div>
           <div class="scroll-layout">
             <div class="scroll-content" style="max-height: 581px; overflow-y: auto">
@@ -160,7 +161,6 @@
               </table>
             </div>
           </div>
-          @@include('@@webRoot/html/_components/_pagination.html')
           <!-- //container -->
         </div>
       </div>
