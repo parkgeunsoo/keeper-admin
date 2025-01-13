@@ -69,7 +69,12 @@
                 <tbody>
                   @@for( i=1; i < 4; i++){ <tr>
                     <td class="text-center">`+ i +`</td>
-                    <td class="text-center"><input class="form-check-input" type="checkbox"></td>
+                    <td class="text-center">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" />
+                        <span class="checkbox-content">`+ i +`</span>
+                      </label>
+                    </td>
                     <td class="text-start">Smart Light Solution</td>
                     <td class="text-center">SLS</td>
                     <td class="text-center">2024-05-26</td>
